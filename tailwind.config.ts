@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-import plugin from 'tailwindcss/plugin';
+import tailwindcssAnimate from 'tailwindcss-animate';
 
 const config: Config = {
   darkMode: 'class',
@@ -20,11 +20,11 @@ const config: Config = {
     extend: {
       colors: {
         // Aliases for legacy IBVI color classes
-        'ibvi-teal': 'hsl(var(--color-teal) / <alpha-value>)',
-        'ibvi-gold': 'hsl(var(--color-gold) / <alpha-value>)',
-        'ibvi-charcoal': 'hsl(var(--color-charcoal) / <alpha-value>)',
-        'ibvi-cream': 'hsl(var(--color-cream) / <alpha-value>)',
-        'ibvi-navy': 'hsl(var(--color-navy) / <alpha-value>)',
+        'ibvi-teal': 'hsl(var(--color-teal) / <alpha>)',
+        'ibvi-gold': 'hsl(var(--color-gold) / <alpha>)',
+        'ibvi-charcoal': 'hsl(var(--color-charcoal) / <alpha>)',
+        'ibvi-cream': 'hsl(var(--color-cream) / <alpha>)',
+        'ibvi-navy': 'hsl(var(--color-navy) / <alpha>)',
         // Semantic colors
         'success': '#27AE60',
         'warning': '#F39C12',
@@ -132,6 +132,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [tailwindcssAnimate],
 };
 export default config;
