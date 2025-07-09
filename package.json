@@ -29,6 +29,7 @@
   "author": "IBVI",
   "license": "SEE LICENSE IN LICENSE",
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/node": "24.0.12",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
@@ -38,8 +39,7 @@
     "postcss": "8.5.6",
     "prettier": "3.6.2",
     "sharp": "0.34.2",
-    "tailwindcss": "4.1.11",
-    "@tailwindcss/postcss": "4.1.11",
+    "tailwindcss": "^4.1.11",
     "typescript": "5.8.3"
   },
   "dependencies": {
