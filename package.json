@@ -18,7 +18,10 @@
     "build:tokens": "node scripts/build-tokens.js",
     "validate:contrast": "node tools/validators/contrast-checker.js",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "setup:logos": "node scripts/setup-logos.js",
+    "optimize:logos": "node scripts/optimize-logos.js",
+    "logos": "npm run setup:logos && npm run optimize:logos"
   },
   "keywords": ["ibvi", "brand", "design-system", "guidelines"],
   "author": "IBVI",
