@@ -22,6 +22,36 @@ export default function Home() {
             Implementação com Next.js 15, Tailwind CSS e shadcn/ui
           </p>
         </div>
+        
+        {/* Logo Variants */}
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Variantes de Logo</CardTitle>
+            <CardDescription>
+              Todas as variações da logomarca IBVI
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="flex flex-col items-center justify-center p-6 rounded-lg">
+                <Logo variant="primary" size="lg" className="mb-4" />
+                <p className="text-sm font-medium">Primary</p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-6 rounded-lg">
+                <Logo variant="dark" size="lg" className="mb-4" />
+                <p className="text-sm font-medium">Dark</p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-6 rounded-lg">
+                <Logo variant="mono" size="lg" className="mb-4" />
+                <p className="text-sm font-medium">Mono</p>
+              </div>
+              <div className="flex flex-col items-center justify-center p-6 rounded-lg">
+                <Logo variant="mono-dark" size="lg" className="mb-4" />
+                <p className="text-sm font-medium">Mono Dark</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Button Examples */}
         <Card className="mb-8">
