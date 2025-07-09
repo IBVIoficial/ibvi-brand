@@ -34,7 +34,7 @@ export function Logo({
     'mono-dark': '/assets/logo/png/ibvi-logo-mono-dark.png',
   }
   
-  const MotionImage = motion(Image)
+  const MotionImage = motion.create(Image)
   
   const imageElement = (
     <Image

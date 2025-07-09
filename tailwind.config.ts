@@ -19,13 +19,6 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // IBVI brand colors
-        'ibvi-teal': 'hsl(var(--ibvi-teal))',
-        'ibvi-gold': 'hsl(var(--ibvi-gold))',
-        'ibvi-charcoal': 'hsl(var(--ibvi-charcoal))',
-        'ibvi-cream': 'hsl(var(--ibvi-cream))',
-        'ibvi-navy': 'hsl(var(--ibvi-navy))',
-        
         // Semantic colors
         'success': '#27AE60',
         'warning': '#F39C12',

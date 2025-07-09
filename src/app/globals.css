@@ -3,95 +3,78 @@
 /* Import Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+@theme {
+  /* IBVI Brand Palette */
+  --color-teal: 191 38% 25%; /* #28515A */
+  --color-gold: 39 87% 65%; /* #F3BA57 */
+  --color-charcoal: 0 0% 11%; /* #1C1C1C */
+  --color-cream: 43 90% 96%; /* #FEF9EC */
+  --color-navy: 203 22% 7%; /* #0E1316 */
+}
+
 @layer base {
   :root {
-    /* IBVI Brand Colors as CSS variables */
-    --ibvi-teal-hue: 191deg;
-    --ibvi-teal-saturation: 38%;
-    --ibvi-teal-lightness: 25%;
-    --ibvi-teal: var(--ibvi-teal-hue) var(--ibvi-teal-saturation) var(--ibvi-teal-lightness);
-    
-    --ibvi-gold-hue: 39deg;
-    --ibvi-gold-saturation: 87%;
-    --ibvi-gold-lightness: 65%;
-    --ibvi-gold: var(--ibvi-gold-hue) var(--ibvi-gold-saturation) var(--ibvi-gold-lightness);
-    
-    --ibvi-charcoal-hue: 0deg;
-    --ibvi-charcoal-saturation: 0%;
-    --ibvi-charcoal-lightness: 11%;
-    --ibvi-charcoal: var(--ibvi-charcoal-hue) var(--ibvi-charcoal-saturation) var(--ibvi-charcoal-lightness);
-    
-    --ibvi-cream-hue: 43deg;
-    --ibvi-cream-saturation: 90%;
-    --ibvi-cream-lightness: 96%;
-    --ibvi-cream: var(--ibvi-cream-hue) var(--ibvi-cream-saturation) var(--ibvi-cream-lightness);
-    
-    --ibvi-navy-hue: 203deg;
-    --ibvi-navy-saturation: 22%;
-    --ibvi-navy-lightness: 7%;
-    --ibvi-navy: var(--ibvi-navy-hue) var(--ibvi-navy-saturation) var(--ibvi-navy-lightness);
-
     /* shadcn/ui variables - Light mode */
-    --background: var(--ibvi-cream);
-    --foreground: var(--ibvi-charcoal);
+    --background: hsl(var(--color-cream));
+    --foreground: hsl(var(--color-charcoal));
 
-    --card: 0deg 0% 100%;
-    --card-foreground: var(--ibvi-charcoal);
+    --card: hsl(var(--color-cream));
+    --card-foreground: hsl(var(--color-charcoal));
 
-    --popover: 0deg 0% 100%;
-    --popover-foreground: var(--ibvi-charcoal);
+    --popover: hsl(var(--color-cream));
+    --popover-foreground: hsl(var(--color-charcoal));
 
-    --primary: var(--ibvi-teal);
-    --primary-foreground: var(--ibvi-cream);
+    --primary: hsl(var(--color-teal));
+    --primary-foreground: hsl(var(--color-cream));
 
-    --secondary: var(--ibvi-gold);
-    --secondary-foreground: var(--ibvi-charcoal);
+    --secondary: hsl(var(--color-gold));
+    --secondary-foreground: hsl(var(--color-charcoal));
 
-    --muted: 43deg 20% 95%;
-    --muted-foreground: 0deg 0% 40%;
+    --muted: hsl(43deg 20% 95%);
+    --muted-foreground: hsl(0deg 0% 40%);
 
-    --accent: var(--ibvi-gold);
-    --accent-foreground: var(--ibvi-charcoal);
+    --accent: hsl(var(--color-gold));
+    --accent-foreground: hsl(var(--color-charcoal));
 
-    --destructive: 0deg 84% 60%;
-    --destructive-foreground: 0deg 0% 98%;
+    --destructive: hsl(0deg 84% 60%);
+    --destructive-foreground: hsl(0deg 0% 98%);
 
-    --border: 0deg 0% 90%;
-    --input: 0deg 0% 90%;
-    --ring: var(--ibvi-teal);
+    --border: hsl(0deg 0% 90%);
+    --input: hsl(0deg 0% 90%);
+    --ring: hsl(var(--color-teal));
 
     --radius: 0.5rem;
   }
 
   .dark {
     /* Dark mode with IBVI navy */
-    --background: var(--ibvi-navy);
-    --foreground: var(--ibvi-cream);
+    --background: hsl(var(--color-navy));
+    --foreground: hsl(var(--color-cream));
 
-    --card: 203deg 22% 10%;
-    --card-foreground: var(--ibvi-cream);
+    --card: hsl(203 22% 10%);
+    --card-foreground: hsl(var(--color-cream));
 
-    --popover: 203deg 22% 10%;
-    --popover-foreground: var(--ibvi-cream);
+    --popover: hsl(203 22% 10%);
+    --popover-foreground: hsl(var(--color-cream));
 
-    --primary: var(--ibvi-gold); /* gold in dark mode */
-    --primary-foreground: var(--ibvi-charcoal);
+    --primary: hsl(var(--color-gold)); /* gold in dark mode */
+    --primary-foreground: hsl(var(--color-charcoal));
 
-    --secondary: var(--ibvi-teal); /* teal in dark mode */
-    --secondary-foreground: var(--ibvi-cream);
+    --secondary: hsl(var(--color-teal)); /* teal in dark mode */
+    --secondary-foreground: hsl(var(--color-cream));
 
     --muted: 203deg 22% 15%;
     --muted-foreground: 43deg 40% 80%;
 
-    --accent: var(--ibvi-gold);
-    --accent-foreground: var(--ibvi-charcoal);
+    --accent: hsl(var(--color-gold));
+    --accent-foreground: hsl(var(--color-charcoal));
 
     --destructive: 0deg 70% 50%;
     --destructive-foreground: 0deg 0% 98%;
 
     --border: 203deg 22% 20%;
     --input: 203deg 22% 20%;
-    --ring: var(--ibvi-gold); /* gold in dark mode */
+    --ring: hsl(var(--color-gold)); /* gold in dark mode */
   }
 }
 
@@ -118,16 +101,16 @@
   .gradient-ibvi {
     background-image: linear-gradient(
       to bottom right,
-      hsl(var(--ibvi-teal)),
-      hsl(var(--ibvi-teal-hue) var(--ibvi-teal-saturation) calc(var(--ibvi-teal-lightness) + 10%))
+      hsl(var(--color-teal)),
+      hsl(var(--color-teal) / 0.9) /* Adjust as needed for a lighter shade */
     );
   }
 
   .gradient-gold {
     background-image: linear-gradient(
       to bottom right,
-      hsl(var(--ibvi-gold)),
-      hsl(var(--ibvi-gold-hue) var(--ibvi-gold-saturation) calc(var(--ibvi-gold-lightness) - 10%))
+      hsl(var(--color-gold)),
+      hsl(var(--color-gold) / 0.9) /* Adjust as needed for a darker shade */
     );
   }
 
