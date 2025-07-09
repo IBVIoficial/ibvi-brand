@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   darkMode: 'class',
@@ -18,52 +19,52 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Define IBVI brand colors using CSS variables
-        'ibvi-teal': 'hsl(var(--ibvi-teal) / <alpha-value>)',
-        'ibvi-gold': 'hsl(var(--ibvi-gold) / <alpha-value>)',
-        'ibvi-charcoal': 'hsl(var(--ibvi-charcoal) / <alpha-value>)',
-        'ibvi-cream': 'hsl(var(--ibvi-cream) / <alpha-value>)',
-        'ibvi-navy': 'hsl(var(--ibvi-navy) / <alpha-value>)',
-
+        // IBVI brand colors
+        'ibvi-teal': 'hsl(var(--ibvi-teal))',
+        'ibvi-gold': 'hsl(var(--ibvi-gold))',
+        'ibvi-charcoal': 'hsl(var(--ibvi-charcoal))',
+        'ibvi-cream': 'hsl(var(--ibvi-cream))',
+        'ibvi-navy': 'hsl(var(--ibvi-navy))',
+        
         // Semantic colors
-        success: '#27AE60',
-        warning: '#F39C12',
-        error: '#E74C3C',
-        info: '#3498DB',
+        'success': '#27AE60',
+        'warning': '#F39C12',
+        'error': '#E74C3C',
+        'info': '#3498DB',
 
         // shadcn/ui compatibility
-        border: 'hsl(var(--border) / <alpha-value>)',
-        input: 'hsl(var(--input) / <alpha-value>)',
-        ring: 'hsl(var(--ring) / <alpha-value>)',
-        background: 'hsl(var(--background) / <alpha-value>)',
-        foreground: 'hsl(var(--foreground) / <alpha-value>)',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: 'hsl(var(--primary) / <alpha-value>)',
-          foreground: 'hsl(var(--primary-foreground) / <alpha-value>)',
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary) / <alpha-value>)',
-          foreground: 'hsl(var(--secondary-foreground) / <alpha-value>)',
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
         },
         destructive: {
-          DEFAULT: 'hsl(var(--destructive) / <alpha-value>)',
-          foreground: 'hsl(var(--destructive-foreground) / <alpha-value>)',
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
         },
         muted: {
-          DEFAULT: 'hsl(var(--muted) / <alpha-value>)',
-          foreground: 'hsl(var(--muted-foreground) / <alpha-value>)',
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent) / <alpha-value>)',
-          foreground: 'hsl(var(--accent-foreground) / <alpha-value>)',
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
         },
         popover: {
-          DEFAULT: 'hsl(var(--popover) / <alpha-value>)',
-          foreground: 'hsl(var(--popover-foreground) / <alpha-value>)',
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
         },
         card: {
-          DEFAULT: 'hsl(var(--card) / <alpha-value>)',
-          foreground: 'hsl(var(--card-foreground) / <alpha-value>)',
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
         },
       },
       spacing: {
