@@ -3,17 +3,15 @@
 /* Import Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-@theme {
-  /* IBVI Brand Palette */
-  --color-teal: 191 38% 25%; /* #28515A */
-  --color-gold: 39 87% 65%; /* #F3BA57 */
-  --color-charcoal: 0 0% 11%; /* #1C1C1C */
-  --color-cream: 43 90% 96%; /* #FEF9EC */
-  --color-navy: 203 22% 7%; /* #0E1316 */
-}
-
 @layer base {
   :root {
+    /* IBVI Brand Palette */
+    --color-teal: 191deg 38% 25%; /* #28515A */
+    --color-gold: 39deg 87% 65%; /* #F3BA57 */
+    --color-charcoal: 0deg 0% 11%; /* #1C1C1C */
+    --color-cream: 43deg 90% 96%; /* #FEF9EC */
+    --color-navy: 203deg 22% 7%; /* #0E1316 */
+    
     /* shadcn/ui variables - Light mode */
     --background: hsl(var(--color-cream));
     --foreground: hsl(var(--color-charcoal));

@@ -2,19 +2,25 @@
 import type { Config } from 'tailwindcss';
 import tailwindcssAnimate from 'tailwindcss-animate'; // ✅ ESM
 
-const config: Config = {
+// Estender o tipo Config para incluir a propriedade safelist
+interface ExtendedConfig extends Config {
+  safelist?: Array<{ pattern: RegExp }>;
+}
+
+const config: ExtendedConfig = {
   darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'], // v4 dispensa paths explícitos, mas ok se quiser
+  safelist: [{ pattern: /(bg|text|border)-ibvi-(teal|gold|charcoal|cream|navy)(\/\d{1,3})?/ }],
   theme: {
     container: { center: true, padding: '2rem', screens: { '2xl': '1400px' } },
     extend: {
       colors: {
-        // IBVI brand colors - Tailwind v4 native opacity support
-        'ibvi-teal': 'hsl(var(--color-teal))',
-        'ibvi-gold': 'hsl(var(--color-gold))',
-        'ibvi-charcoal': 'hsl(var(--color-charcoal))',
-        'ibvi-cream': 'hsl(var(--color-cream))',
-        'ibvi-navy': 'hsl(var(--color-navy))',
+        // IBVI brand colors - Hex values diretamente para garantir compatibilidade
+        'ibvi-teal': '#28515A',
+        'ibvi-gold': '#F3BA57',
+        'ibvi-charcoal': '#1C1C1C',
+        'ibvi-cream': '#FEF9EC',
+        'ibvi-navy': '#0E1316',
 
         // shadcn/ui compatibility
         border: 'hsl(var(--border))',
