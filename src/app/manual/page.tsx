@@ -15,6 +15,7 @@ import { RoadmapSection } from '@/components/manual/RoadmapSection';
 import { ResourcesAndSupportSection } from '@/components/manual/ResourcesAndSupportSection';
 import { TypographySystemSection } from '@/components/manual/TypographySystemSection';
 import { GridAndCompositionSection } from '@/components/manual/GridAndCompositionSection';
+import { MultichannelApplicationsSection } from '@/components/manual/MultichannelApplicationsSection';
 
 export const metadata: Metadata = {
   title: 'Manual de Identidade Visual - IBVI',
@@ -85,6 +86,8 @@ export default function ManualPage() {
             </div>
           </CardContent>
         </Card>
+
+        <MultichannelApplicationsSection />
 
         <IntroductionSection />
 
