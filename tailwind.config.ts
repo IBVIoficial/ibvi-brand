@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 const config: Config = {
   darkMode: ["class"],
@@ -105,7 +106,7 @@ const config: Config = {
         'xxxl': '96px',
       },
       fontFamily: {
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         // IBVI type scale
