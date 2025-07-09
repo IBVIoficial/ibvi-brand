@@ -1,0 +1,51 @@
+{
+  "color": {
+    "primary": {
+      "teal": {
+        "value": "#28515A",
+        "type": "color",
+        "description": "Primary brand color"
+      },
+      "gold": {
+        "value": "#F3BA57",
+        "type": "color",
+        "description": "Secondary accent color"
+      }
+    },
+    "neutral": {
+      "charcoal": {
+        "value": "#1C1C1C",
+        "type": "color",
+        "description": "Primary text color"
+      },
+      "cream": {
+        "value": "#FEF9EC",
+        "type": "color",
+        "description": "Light background"
+      },
+      "navy": {
+        "value": "#0E1316",
+        "type": "color",
+        "description": "Dark background"
+      }
+    },
+    "semantic": {
+      "success": {
+        "value": "#27AE60",
+        "type": "color"
+      },
+      "warning": {
+        "value": "#F39C12",
+        "type": "color"
+      },
+      "error": {
+        "value": "#E74C3C",
+        "type": "color"
+      },
+      "info": {
+        "value": "#3498DB",
+        "type": "color"
+      }
+    }
+  }
+}

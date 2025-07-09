@@ -1,0 +1,46 @@
+:root {
+  /* Colors */
+  --ibvi-teal: #28515A;
+  --ibvi-gold: #F3BA57;
+  --ibvi-charcoal: #1C1C1C;
+  --ibvi-cream: #FEF9EC;
+  --ibvi-navy: #0E1316;
+  
+  /* Semantic Colors */
+  --ibvi-success: #27AE60;
+  --ibvi-warning: #F39C12;
+  --ibvi-error: #E74C3C;
+  --ibvi-info: #3498DB;
+  
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Spacing */
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-xxl: 64px;
+  --space-xxxl: 96px;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--ibvi-navy);
+    --foreground: var(--ibvi-cream);
+  }
+}

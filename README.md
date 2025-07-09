@@ -27,7 +27,7 @@ This repository contains all official brand assets, guidelines, and implementati
 
 ```bash
 # Clone the repository
-git clone https://github.com/ibvi/brand.git
+git clone https://github.com/IBVIoficial/ibvi-brand.git
 
 # Install dependencies (if using components)
 npm install
@@ -188,7 +188,7 @@ npm run build:tokens
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ### Reporting Issues
-- Use [GitHub Issues](https://github.com/ibvi/brand/issues) for bugs
+- Use [GitHub Issues](https://github.com/IBVIoficial/ibvi-brand/issues) for bugs
 - Include version number and browser/OS
 - Provide reproduction steps
 
