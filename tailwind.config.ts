@@ -26,10 +26,10 @@ const config: Config = {
         'ibvi-cream': 'hsl(var(--color-cream) / <alpha>)',
         'ibvi-navy': 'hsl(var(--color-navy) / <alpha>)',
         // Semantic colors
-        'success': '#27AE60',
-        'warning': '#F39C12',
-        'error': '#E74C3C',
-        'info': '#3498DB',
+        success: '#27AE60',
+        warning: '#F39C12',
+        error: '#E74C3C',
+        info: '#3498DB',
 
         // shadcn/ui compatibility
         border: 'hsl(var(--border))',
