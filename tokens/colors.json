@@ -27,6 +27,11 @@
         "value": "#0E1316",
         "type": "color",
         "description": "Dark background"
+      },
+      "nocturne-teal": {
+        "value": "#050E18",
+        "type": "color",
+        "description": "Deeper dark background for logo containers"
       }
     },
     "semantic": {

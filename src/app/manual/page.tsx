@@ -1,12 +1,6 @@
 import { Metadata } from 'next';
 import { Logo } from '@/components/brand/Logo';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { SimpleCard, SimpleCardHeader, SimpleCardContent } from '@/components/ui/simple-card';
 import { IntroductionSection } from '@/components/manual/IntroductionSection';
 import { IdentityAndPositioningSection } from '@/components/manual/IdentityAndPositioningSection';
 import { CoreVisualSystemSection } from '@/components/manual/CoreVisualSystemSection';
@@ -42,15 +36,12 @@ export default function ManualPage() {
           </h2>
         </header>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Variantes de Logo</CardTitle>
-            <CardDescription>
-              Todas as variações da logomarca IBVI para diferentes fundos e
-              aplicações.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+        <SimpleCard>
+          <SimpleCardHeader
+            title="Variantes de Logo"
+            description="Todas as variações da logomarca IBVI para diferentes fundos e aplicações."
+          />
+          <SimpleCardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="flex flex-col items-center justify-center p-6 rounded-lg">
                 <Logo variant="primary" size="lg" className="mb-4" />
@@ -69,18 +60,15 @@ export default function ManualPage() {
                 <p className="text-sm font-medium">Mono Dark</p>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </SimpleCardContent>
+        </SimpleCard>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Sumário Executivo</CardTitle>
-            <CardDescription>
-              Guia definitivo para aplicação consistente da identidade visual
-              IBVI.
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+        <SimpleCard>
+          <SimpleCardHeader
+            title="Sumário Executivo"
+            description="Guia definitivo para aplicação consistente da identidade visual IBVI."
+          />
+          <SimpleCardContent>
             <p className="text-muted-foreground">
               Garantindo coerência multicanal, mensurabilidade (CTR +18%, CPL
               –10%, Brand Recall +25%, NPS 72, Precisão 95%) e conformidade de
@@ -90,8 +78,8 @@ export default function ManualPage() {
               <strong>Release:</strong> Janeiro 2025 | ISO 20671, ISO 10668,
               LGPD/GDPR, WCAG AA
             </div>
-          </CardContent>
-        </Card>
+          </SimpleCardContent>
+        </SimpleCard>
 
         <MultichannelApplicationsSection />
 

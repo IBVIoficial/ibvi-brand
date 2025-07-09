@@ -2,12 +2,11 @@ import Link from 'next/link';
 import { Logo } from '@/components/brand/Logo';
 import { Button } from '@/components/brand/Button';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+  SimpleCard,
+  SimpleCardHeader,
+  SimpleCardContent,
+  SimpleCardFooter,
+} from '@/components/ui/simple-card';
 
 export default function Home() {
   return (
@@ -23,42 +22,73 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <CardTitle>Site</CardTitle>
-              <CardDescription>
-                Referências de Marca para o Site
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex justify-end">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          <SimpleCard className="hover:shadow-lg transition-shadow">
+            <SimpleCardHeader
+              title="Site"
+              description="Referências de Marca para o Site"
+            />
+            <SimpleCardContent className="flex justify-end">
               <Button asChild variant="primary">
-                <Link href="/site">Explorar</Link>
+                <Link href="/site">Acessar</Link>
               </Button>
-            </CardContent>
-          </Card>
+            </SimpleCardContent>
+          </SimpleCard>
 
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardHeader>
-              <CardTitle>Manual</CardTitle>
-              <CardDescription>Consulte nosso manual de marca</CardDescription>
-            </CardHeader>
-            <CardContent className="flex justify-end">
+          <SimpleCard className="hover:shadow-lg transition-shadow bg-ibvi-navy text-white">
+            <SimpleCardHeader
+              title="Site Dark"
+              description="Versão escura do site de referências"
+            />
+            <SimpleCardContent className="flex justify-end">
+              <Button asChild variant="secondary">
+                <Link href="/site-dark">Acessar</Link>
+              </Button>
+            </SimpleCardContent>
+          </SimpleCard>
+
+          <SimpleCard className="hover:shadow-lg transition-shadow">
+            <SimpleCardHeader
+              title="Manual"
+              description="Consulte nosso manual de marca"
+            />
+            <SimpleCardContent className="flex justify-end">
               <Button asChild>
                 <Link href="/manual">Acessar</Link>
               </Button>
-            </CardContent>
-          </Card>
+            </SimpleCardContent>
+          </SimpleCard>
+
+          <SimpleCard className="hover:shadow-lg transition-shadow bg-white">
+            <SimpleCardHeader
+              title="Exemplos"
+              description="Componentes e estilos de cards"
+            />
+            <SimpleCardContent className="flex justify-end">
+              <Button asChild variant="secondary">
+                <Link href="/examples/cards">Ver exemplos</Link>
+              </Button>
+            </SimpleCardContent>
+          </SimpleCard>
+          <SimpleCard className="hover:shadow-lg transition-shadow bg-white">
+            <SimpleCardHeader
+              title="Footer"
+              description="Diretrizes de implementação do Footer"
+            />
+            <SimpleCardContent className="flex justify-end">
+              <Button asChild variant="secondary">
+                <Link href="/examples/footer">Ver exemplos</Link>
+              </Button>
+            </SimpleCardContent>
+          </SimpleCard>
         </div>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Variantes de Logo</CardTitle>
-            <CardDescription>
-              Todas as variações da logomarca IBVI
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+        <SimpleCard>
+          <SimpleCardHeader
+            title="Variantes de Logo"
+            description="Todas as variações da logomarca IBVI"
+          />
+          <SimpleCardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="flex flex-col items-center justify-center p-4 rounded-lg">
                 <Logo variant="primary" size="lg" className="mb-3" />
@@ -77,8 +107,8 @@ export default function Home() {
                 <p className="text-sm font-medium">Mono Dark</p>
               </div>
             </div>
-          </CardContent>
-        </Card>
+          </SimpleCardContent>
+        </SimpleCard>
       </div>
     </main>
   );
