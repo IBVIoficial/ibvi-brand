@@ -1,0 +1,90 @@
+{
+  "logos": [
+    {
+      "id": "primary",
+      "name": "IBVI Logo Primary",
+      "filename": "ibvi-logo-primary",
+      "description": "Primary logo for use on light backgrounds",
+      "usage": {
+        "backgrounds": ["#FFFFFF", "#F5F5F5", "#FEF9EC"],
+        "minHeight": 32,
+        "clearSpace": "2x",
+        "preferredFormat": "svg"
+      },
+      "colors": {
+        "symbol": ["#28515A", "#F3BA57"],
+        "text": "#1C1C1C"
+      },
+      "formats": ["svg", "png", "webp"],
+      "sizes": [16, 32, 48, 64, 96, 128, 256, 512]
+    },
+    {
+      "id": "dark",
+      "name": "IBVI Logo Dark",
+      "filename": "ibvi-logo-dark",
+      "description": "Logo variant for dark backgrounds",
+      "usage": {
+        "backgrounds": ["#000000", "#1C1C1C", "#0E1316"],
+        "minHeight": 32,
+        "clearSpace": "2x",
+        "preferredFormat": "svg"
+      },
+      "colors": {
+        "symbol": ["#28515A", "#F3BA57"],
+        "text": "#FEF9EC"
+      },
+      "formats": ["svg", "png", "webp"],
+      "sizes": [16, 32, 48, 64, 96, 128, 256, 512]
+    },
+    {
+      "id": "mono",
+      "name": "IBVI Logo Monochrome",
+      "filename": "ibvi-logo-mono",
+      "description": "Single color version for special applications",
+      "usage": {
+        "backgrounds": "any-light",
+        "minHeight": 24,
+        "clearSpace": "2x",
+        "applications": ["embossing", "engraving", "single-color-print"]
+      },
+      "colors": {
+        "fill": "currentColor"
+      },
+      "formats": ["svg", "png", "webp"],
+      "sizes": [16, 32, 48, 64, 96, 128, 256, 512]
+    },
+    {
+      "id": "mono-dark",
+      "name": "IBVI Logo Monochrome Dark",
+      "filename": "ibvi-logo-mono-dark",
+      "description": "Single color version for dark backgrounds",
+      "usage": {
+        "backgrounds": "any-dark",
+        "minHeight": 24,
+        "clearSpace": "2x",
+        "applications": ["dark-ui", "inverted-print"]
+      },
+      "colors": {
+        "fill": "currentColor"
+      },
+      "formats": ["svg", "png", "webp"],
+      "sizes": [16, 32, 48, 64, 96, 128, 256, 512]
+    }
+  ],
+  "guidelines": {
+    "clearSpace": "Minimum clear space around logo should be 2x the height of the lowercase 'i' in 'ibvi'",
+    "minSize": {
+      "digital": "32px height",
+      "print": "10mm height"
+    },
+    "colorApplication": {
+      "primary": "Use on backgrounds with contrast ratio ≥ 4.5:1",
+      "mono": "Apply in the darkest/lightest color available"
+    }
+  },
+  "legal": {
+    "copyright": "© 2025 IBVI - Inteligência Imobiliária Precisa",
+    "trademark": "IBVI® is a registered trademark",
+    "usage": "See LICENSE-ASSETS.md for usage rights"
+  }
+}
