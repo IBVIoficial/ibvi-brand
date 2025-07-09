@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import { Logo } from '@/components/brand/Logo';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Manual de Identidade Visual - IBVI',
@@ -12,6 +14,35 @@ export default function ManualPage() {
         <div className="prose prose-lg max-w-none">
           <h1 className="text-4xl font-bold text-foreground mb-2">Manual de Identidade Visual IBVI – Versão 2.1</h1>
           <h2 className="text-2xl font-semibold text-muted-foreground mb-8">Sistema de Alta Performance para Inteligência Imobiliária</h2>
+
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle>Variantes de Logo</CardTitle>
+              <CardDescription>
+                Todas as variações da logomarca IBVI
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="flex flex-col items-center justify-center p-6 rounded-lg">
+                  <Logo variant="primary" size="lg" className="mb-4" />
+                  <p className="text-sm font-medium">Primary</p>
+                </div>
+                <div className="flex flex-col items-center justify-center p-6 rounded-lg">
+                  <Logo variant="dark" size="lg" className="mb-4" />
+                  <p className="text-sm font-medium">Dark</p>
+                </div>
+                <div className="flex flex-col items-center justify-center p-6 rounded-lg">
+                  <Logo variant="mono" size="lg" className="mb-4" />
+                  <p className="text-sm font-medium">Mono</p>
+                </div>
+                <div className="flex flex-col items-center justify-center p-6 rounded-lg">
+                  <Logo variant="mono-dark" size="lg" className="mb-4" />
+                  <p className="text-sm font-medium">Mono Dark</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
           
           <div className="bg-muted p-4 rounded-lg mb-8">
             <p className="text-sm text-muted-foreground mb-0">
