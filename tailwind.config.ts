@@ -19,6 +19,12 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // Aliases for legacy IBVI color classes
+        'ibvi-teal': 'hsl(var(--color-teal) / <alpha-value>)',
+        'ibvi-gold': 'hsl(var(--color-gold) / <alpha-value>)',
+        'ibvi-charcoal': 'hsl(var(--color-charcoal) / <alpha-value>)',
+        'ibvi-cream': 'hsl(var(--color-cream) / <alpha-value>)',
+        'ibvi-navy': 'hsl(var(--color-navy) / <alpha-value>)',
         // Semantic colors
         'success': '#27AE60',
         'warning': '#F39C12',
