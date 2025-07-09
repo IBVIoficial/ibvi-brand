@@ -1,4 +1,6 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Import Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -6,15 +8,15 @@
 @layer base {
   :root {
     /* IBVI Brand Palette */
-    --color-teal: 191deg 38% 25%; /* #28515A */
-    --color-gold: 39deg 87% 65%; /* #F3BA57 */
-    --color-charcoal: 0deg 0% 11%; /* #1C1C1C */
-    --color-cream: 43deg 90% 96%; /* #FEF9EC */
-    --color-navy: 203deg 22% 7%; /* #0E1316 */
-    
+    --color-teal: 191deg 38% 25%;
+    --color-gold: 39deg 87% 65%;
+    --color-charcoal: 0deg 0% 11%;
+    --color-cream: 43deg 90% 96%;
+    --color-navy: 203deg 22% 7%;
+
     /* shadcn/ui variables - Light mode */
     --background: hsl(var(--color-cream));
-    --foreground: hsl(var(--color-charcoal));
+    --foreground: hsl(var(--color-navy));
 
     --card: hsl(var(--color-cream));
     --card-foreground: hsl(var(--color-charcoal));
@@ -81,7 +83,7 @@
     border-color: hsl(var(--border));
   }
   body {
-    background-color: hsl(var(--background));
+    background-color: #FEF9EC !important;
     color: hsl(var(--foreground));
     font-feature-settings:
       'rlig' 1,

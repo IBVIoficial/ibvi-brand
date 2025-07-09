@@ -1,0 +1,20 @@
+/* IBVI Color Classes */
+.bg-ibvi-teal { background-color: #28515A; }
+.text-ibvi-teal { color: #28515A; }
+.border-ibvi-teal { border-color: #28515A; }
+
+.bg-ibvi-gold { background-color: #F3BA57; }
+.text-ibvi-gold { color: #F3BA57; }
+.border-ibvi-gold { border-color: #F3BA57; }
+
+.bg-ibvi-charcoal { background-color: #1C1C1C; }
+.text-ibvi-charcoal { color: #1C1C1C; }
+.border-ibvi-charcoal { border-color: #1C1C1C; }
+
+.bg-ibvi-cream { background-color: #FEF9EC; }
+.text-ibvi-cream { color: #FEF9EC; }
+.border-ibvi-cream { border-color: #FEF9EC; }
+
+.bg-ibvi-navy { background-color: #0E1316; }
+.text-ibvi-navy { color: #0E1316; }
+.border-ibvi-navy { border-color: #0E1316; }
