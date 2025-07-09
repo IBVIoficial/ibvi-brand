@@ -13,33 +13,33 @@
     --ibvi-navy: 203deg 22% 7%;
 
     /* shadcn/ui variables - Light mode */
-    --background: 43 90% 96%; /* cream */
-    --foreground: 0 0% 11%; /* charcoal */
+    --background: 43deg 90% 96%; /* cream */
+    --foreground: 0deg 0% 11%; /* charcoal */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 11%;
+    --card: 0deg 0% 100%;
+    --card-foreground: 0deg 0% 11%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 11%;
+    --popover: 0deg 0% 100%;
+    --popover-foreground: 0deg 0% 11%;
 
-    --primary: 191 38% 25%; /* teal */
-    --primary-foreground: 43 90% 96%;
+    --primary: 191deg 38% 25%; /* teal */
+    --primary-foreground: 43deg 90% 96%;
 
-    --secondary: 39 87% 65%; /* gold */
-    --secondary-foreground: 0 0% 11%;
+    --secondary: 39deg 87% 65%; /* gold */
+    --secondary-foreground: 0deg 0% 11%;
 
-    --muted: 43 20% 95%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 43deg 20% 95%;
+    --muted-foreground: 0deg 0% 40%;
 
-    --accent: 39 87% 65%; /* gold */
-    --accent-foreground: 0 0% 11%;
+    --accent: 39deg 87% 65%; /* gold */
+    --accent-foreground: 0deg 0% 11%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0deg 84% 60%;
+    --destructive-foreground: 0deg 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 191 38% 25%; /* teal */
+    --border: 0deg 0% 90%;
+    --input: 0deg 0% 90%;
+    --ring: 191deg 38% 25%; /* teal */
 
     --radius: 0.5rem;
   }
