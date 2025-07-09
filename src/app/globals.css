@@ -6,73 +6,92 @@
 @layer base {
   :root {
     /* IBVI Brand Colors as CSS variables */
-    --ibvi-teal: 191deg 38% 25%;
-    --ibvi-gold: 39deg 87% 65%;
-    --ibvi-charcoal: 0deg 0% 11%;
-    --ibvi-cream: 43deg 90% 96%;
-    --ibvi-navy: 203deg 22% 7%;
+    --ibvi-teal-hue: 191deg;
+    --ibvi-teal-saturation: 38%;
+    --ibvi-teal-lightness: 25%;
+    --ibvi-teal: var(--ibvi-teal-hue) var(--ibvi-teal-saturation) var(--ibvi-teal-lightness);
+    
+    --ibvi-gold-hue: 39deg;
+    --ibvi-gold-saturation: 87%;
+    --ibvi-gold-lightness: 65%;
+    --ibvi-gold: var(--ibvi-gold-hue) var(--ibvi-gold-saturation) var(--ibvi-gold-lightness);
+    
+    --ibvi-charcoal-hue: 0deg;
+    --ibvi-charcoal-saturation: 0%;
+    --ibvi-charcoal-lightness: 11%;
+    --ibvi-charcoal: var(--ibvi-charcoal-hue) var(--ibvi-charcoal-saturation) var(--ibvi-charcoal-lightness);
+    
+    --ibvi-cream-hue: 43deg;
+    --ibvi-cream-saturation: 90%;
+    --ibvi-cream-lightness: 96%;
+    --ibvi-cream: var(--ibvi-cream-hue) var(--ibvi-cream-saturation) var(--ibvi-cream-lightness);
+    
+    --ibvi-navy-hue: 203deg;
+    --ibvi-navy-saturation: 22%;
+    --ibvi-navy-lightness: 7%;
+    --ibvi-navy: var(--ibvi-navy-hue) var(--ibvi-navy-saturation) var(--ibvi-navy-lightness);
 
     /* shadcn/ui variables - Light mode */
-    --background: 43deg 90% 96%; /* cream */
-    --foreground: 0deg 0% 11%; /* charcoal */
+    --background: var(--ibvi-cream);
+    --foreground: var(--ibvi-charcoal);
 
     --card: 0deg 0% 100%;
-    --card-foreground: 0deg 0% 11%;
+    --card-foreground: var(--ibvi-charcoal);
 
     --popover: 0deg 0% 100%;
-    --popover-foreground: 0deg 0% 11%;
+    --popover-foreground: var(--ibvi-charcoal);
 
-    --primary: 191deg 38% 25%; /* teal */
-    --primary-foreground: 43deg 90% 96%;
+    --primary: var(--ibvi-teal);
+    --primary-foreground: var(--ibvi-cream);
 
-    --secondary: 39deg 87% 65%; /* gold */
-    --secondary-foreground: 0deg 0% 11%;
+    --secondary: var(--ibvi-gold);
+    --secondary-foreground: var(--ibvi-charcoal);
 
     --muted: 43deg 20% 95%;
     --muted-foreground: 0deg 0% 40%;
 
-    --accent: 39deg 87% 65%; /* gold */
-    --accent-foreground: 0deg 0% 11%;
+    --accent: var(--ibvi-gold);
+    --accent-foreground: var(--ibvi-charcoal);
 
     --destructive: 0deg 84% 60%;
     --destructive-foreground: 0deg 0% 98%;
 
     --border: 0deg 0% 90%;
     --input: 0deg 0% 90%;
-    --ring: 191deg 38% 25%; /* teal */
+    --ring: var(--ibvi-teal);
 
     --radius: 0.5rem;
   }
 
   .dark {
     /* Dark mode with IBVI navy */
-    --background: 203deg 22% 7%; /* navy */
-    --foreground: 43deg 90% 96%; /* cream */
+    --background: var(--ibvi-navy);
+    --foreground: var(--ibvi-cream);
 
     --card: 203deg 22% 10%;
-    --card-foreground: 43deg 90% 96%;
+    --card-foreground: var(--ibvi-cream);
 
     --popover: 203deg 22% 10%;
-    --popover-foreground: 43deg 90% 96%;
+    --popover-foreground: var(--ibvi-cream);
 
-    --primary: 39deg 87% 65%; /* gold in dark mode */
-    --primary-foreground: 0deg 0% 11%;
+    --primary: var(--ibvi-gold); /* gold in dark mode */
+    --primary-foreground: var(--ibvi-charcoal);
 
-    --secondary: 191deg 38% 25%; /* teal in dark mode */
-    --secondary-foreground: 43deg 90% 96%;
+    --secondary: var(--ibvi-teal); /* teal in dark mode */
+    --secondary-foreground: var(--ibvi-cream);
 
     --muted: 203deg 22% 15%;
     --muted-foreground: 43deg 40% 80%;
 
-    --accent: 39deg 87% 65%;
-    --accent-foreground: 0deg 0% 11%;
+    --accent: var(--ibvi-gold);
+    --accent-foreground: var(--ibvi-charcoal);
 
     --destructive: 0deg 70% 50%;
     --destructive-foreground: 0deg 0% 98%;
 
     --border: 203deg 22% 20%;
     --input: 203deg 22% 20%;
-    --ring: 39deg 87% 65%; /* gold in dark mode */
+    --ring: var(--ibvi-gold); /* gold in dark mode */
   }
 }
 
@@ -100,7 +119,7 @@
     background-image: linear-gradient(
       to bottom right,
       hsl(var(--ibvi-teal)),
-      hsl(var(--ibvi-teal) / 0.7)
+      hsl(var(--ibvi-teal-hue) var(--ibvi-teal-saturation) calc(var(--ibvi-teal-lightness) + 10%))
     );
   }
 
@@ -108,7 +127,7 @@
     background-image: linear-gradient(
       to bottom right,
       hsl(var(--ibvi-gold)),
-      hsl(var(--ibvi-gold) / 0.8)
+      hsl(var(--ibvi-gold-hue) var(--ibvi-gold-saturation) calc(var(--ibvi-gold-lightness) - 10%))
     );
   }
 
