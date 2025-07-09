@@ -6,11 +6,11 @@
 @layer base {
   :root {
     /* IBVI Brand Colors as CSS variables */
-    --ibvi-teal: 191 38% 25%;
-    --ibvi-gold: 39 87% 65%;
-    --ibvi-charcoal: 0 0% 11%;
-    --ibvi-cream: 43 90% 96%;
-    --ibvi-navy: 203 22% 7%;
+    --ibvi-teal: 191deg 38% 25%;
+    --ibvi-gold: 39deg 87% 65%;
+    --ibvi-charcoal: 0deg 0% 11%;
+    --ibvi-cream: 43deg 90% 96%;
+    --ibvi-navy: 203deg 22% 7%;
 
     /* shadcn/ui variables - Light mode */
     --background: 43 90% 96%; /* cream */
