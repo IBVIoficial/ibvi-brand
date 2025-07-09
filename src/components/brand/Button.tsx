@@ -3,7 +3,6 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
-import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
@@ -11,8 +10,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-ibvi-gold text-ibvi-charcoal hover:bg-ibvi-gold-600 focus-visible:ring-ibvi-gold/20",
-        primary: "bg-ibvi-teal text-ibvi-cream hover:bg-ibvi-teal-600 focus-visible:ring-ibvi-teal/20",
+        default: "bg-ibvi-gold text-ibvi-charcoal hover:opacity-90 focus-visible:ring-ibvi-gold/20",
+        primary: "bg-ibvi-teal text-ibvi-cream hover:opacity-90 focus-visible:ring-ibvi-teal/20",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline: "border-2 border-ibvi-teal text-ibvi-teal hover:bg-ibvi-teal hover:text-ibvi-cream",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
@@ -25,10 +24,15 @@ const buttonVariants = cva(
         lg: "h-12 px-8 text-base",
         icon: "h-10 w-10",
       },
+      animated: {
+        true: "transform transition-transform hover:scale-[1.02] active:scale-[0.98]",
+        false: "",
+      }
     },
     defaultVariants: {
       variant: "default",
       size: "default",
+      animated: true,
     },
   }
 )
@@ -37,20 +41,16 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
-  animated?: boolean
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, animated = true, ...props }, ref) => {
+  ({ className, variant, size, animated, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
-    const MotionComp = animated ? motion(Comp) : Comp
     
     return (
-      <MotionComp
-        className={cn(buttonVariants({ variant, size, className }))}
+      <Comp
+        className={cn(buttonVariants({ variant, size, animated, className }))}
         ref={ref}
-        whileHover={animated ? { scale: 1.02 } : undefined}
-        whileTap={animated ? { scale: 0.98 } : undefined}
         {...props}
       />
     )

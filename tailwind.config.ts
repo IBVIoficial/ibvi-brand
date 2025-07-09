@@ -18,45 +18,18 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // IBVI Brand Colors
-        ibvi: {
-          teal: {
-            DEFAULT: '#28515A',
-            50: '#E8F0F2',
-            100: '#C2D9DE',
-            200: '#9CC2CA',
-            300: '#76ABB6',
-            400: '#5094A2',
-            500: '#28515A',
-            600: '#234751',
-            700: '#1E3D48',
-            800: '#19333F',
-            900: '#142936',
-            950: '#0F1F2D',
-          },
-          gold: {
-            DEFAULT: '#F3BA57',
-            50: '#FEF9EC',
-            100: '#FDF0D1',
-            200: '#FBE7B6',
-            300: '#F9DE9B',
-            400: '#F7D580',
-            500: '#F3BA57',
-            600: '#F0A82E',
-            700: '#E89605',
-            800: '#C07D04',
-            900: '#986403',
-            950: '#704A02',
-          },
-          charcoal: '#1C1C1C',
-          cream: '#FEF9EC',
-          navy: '#0E1316',
-        },
+        // Define color variables for direct usage with arbitrary values
+        'ibvi-teal': 'hsl(var(--ibvi-teal))',
+        'ibvi-gold': 'hsl(var(--ibvi-gold))',
+        'ibvi-charcoal': 'hsl(var(--ibvi-charcoal))',
+        'ibvi-cream': 'hsl(var(--ibvi-cream))',
+        'ibvi-navy': 'hsl(var(--ibvi-navy))',
+        
         // Semantic colors
-        success: '#27AE60',
-        warning: '#F39C12',
-        error: '#E74C3C',
-        info: '#3498DB',
+        'success': '#27AE60',
+        'warning': '#F39C12',
+        'error': '#E74C3C',
+        'info': '#3498DB',
 
         // shadcn/ui compatibility
         border: 'hsl(var(--border))',
