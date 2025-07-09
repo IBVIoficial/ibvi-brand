@@ -46,33 +46,33 @@
 
   .dark {
     /* Dark mode with IBVI navy */
-    --background: 203 22% 7%; /* navy */
-    --foreground: 43 90% 96%; /* cream */
+    --background: 203deg 22% 7%; /* navy */
+    --foreground: 43deg 90% 96%; /* cream */
 
-    --card: 203 22% 10%;
-    --card-foreground: 43 90% 96%;
+    --card: 203deg 22% 10%;
+    --card-foreground: 43deg 90% 96%;
 
-    --popover: 203 22% 10%;
-    --popover-foreground: 43 90% 96%;
+    --popover: 203deg 22% 10%;
+    --popover-foreground: 43deg 90% 96%;
 
-    --primary: 39 87% 65%; /* gold in dark mode */
-    --primary-foreground: 0 0% 11%;
+    --primary: 39deg 87% 65%; /* gold in dark mode */
+    --primary-foreground: 0deg 0% 11%;
 
-    --secondary: 191 38% 25%; /* teal in dark mode */
-    --secondary-foreground: 43 90% 96%;
+    --secondary: 191deg 38% 25%; /* teal in dark mode */
+    --secondary-foreground: 43deg 90% 96%;
 
-    --muted: 203 22% 15%;
-    --muted-foreground: 43 40% 80%;
+    --muted: 203deg 22% 15%;
+    --muted-foreground: 43deg 40% 80%;
 
-    --accent: 39 87% 65%;
-    --accent-foreground: 0 0% 11%;
+    --accent: 39deg 87% 65%;
+    --accent-foreground: 0deg 0% 11%;
 
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0deg 70% 50%;
+    --destructive-foreground: 0deg 0% 98%;
 
-    --border: 203 22% 20%;
-    --input: 203 22% 20%;
-    --ring: 39 87% 65%; /* gold in dark mode */
+    --border: 203deg 22% 20%;
+    --input: 203deg 22% 20%;
+    --ring: 39deg 87% 65%; /* gold in dark mode */
   }
 }
 

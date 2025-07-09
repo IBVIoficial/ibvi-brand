@@ -18,18 +18,18 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Define color variables for direct usage with arbitrary values
-        'ibvi-teal': 'hsl(var(--ibvi-teal))',
-        'ibvi-gold': 'hsl(var(--ibvi-gold))',
-        'ibvi-charcoal': 'hsl(var(--ibvi-charcoal))',
-        'ibvi-cream': 'hsl(var(--ibvi-cream))',
-        'ibvi-navy': 'hsl(var(--ibvi-navy))',
-        
+        // Define IBVI brand colors using CSS variables
+        'ibvi-teal': 'hsl(var(--ibvi-teal) / <alpha-value>)',
+        'ibvi-gold': 'hsl(var(--ibvi-gold) / <alpha-value>)',
+        'ibvi-charcoal': 'hsl(var(--ibvi-charcoal) / <alpha-value>)',
+        'ibvi-cream': 'hsl(var(--ibvi-cream) / <alpha-value>)',
+        'ibvi-navy': 'hsl(var(--ibvi-navy) / <alpha-value>)',
+
         // Semantic colors
-        'success': '#27AE60',
-        'warning': '#F39C12',
-        'error': '#E74C3C',
-        'info': '#3498DB',
+        success: '#27AE60',
+        warning: '#F39C12',
+        error: '#E74C3C',
+        info: '#3498DB',
 
         // shadcn/ui compatibility
         border: 'hsl(var(--border))',
