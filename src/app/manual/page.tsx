@@ -16,6 +16,8 @@ import { ResourcesAndSupportSection } from '@/components/manual/ResourcesAndSupp
 import { TypographySystemSection } from '@/components/manual/TypographySystemSection';
 import { GridAndCompositionSection } from '@/components/manual/GridAndCompositionSection';
 import { MultichannelApplicationsSection } from '@/components/manual/MultichannelApplicationsSection';
+import { ToneOfVoiceSection } from '@/components/manual/ToneOfVoiceSection';
+import { AccessibilityAndInclusionSection } from '@/components/manual/AccessibilityAndInclusionSection';
 
 export const metadata: Metadata = {
   title: 'Manual de Identidade Visual - IBVI',
@@ -109,141 +111,13 @@ export default function ManualPage() {
 
         <hr className="my-8" />
 
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          7. Aplicações Multicanal
-        </h2>
-
-        <h3 className="text-xl font-semibold text-foreground mb-3">Digital</h3>
-        <ul className="list-disc pl-6 text-muted-foreground mb-6">
-          <li>
-            <strong>Website/App</strong>: Logo ≥32px, animação 200ms ease
-          </li>
-          <li>
-            <strong>Email</strong>: 140px desktop, 100px mobile
-          </li>
-          <li>
-            <strong>Social</strong>: Templates otimizados LinkedIn/Instagram
-          </li>
-        </ul>
-
-        <h3 className="text-xl font-semibold text-foreground mb-3">
-          Impressos
-        </h3>
-        <ul className="list-disc pl-6 text-muted-foreground mb-6">
-          <li>
-            <strong>Cartões</strong>: 20mm canto superior direito
-          </li>
-          <li>
-            <strong>Timbrado</strong>: 30mm centro superior
-          </li>
-          <li>
-            <strong>Brochuras</strong>: Base Teal, destaques Gold
-          </li>
-        </ul>
-
-        <h3 className="text-xl font-semibold text-foreground mb-3">
-          Ambiental
-        </h3>
-        <ul className="list-disc pl-6 text-muted-foreground mb-8">
-          <li>
-            <strong>Externa</strong>: ≥500mm backlight LED 4000K
-          </li>
-          <li>
-            <strong>Interna</strong>: ≥200mm altura 1,60m
-          </li>
-          <li>
-            <strong>Materiais</strong>: Acrílico ou metal escovado
-          </li>
-        </ul>
+        <MultichannelApplicationsSection />
 
         <hr className="my-8" />
-
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          8. Tom de Voz e Comunicação
-        </h2>
-
-        <h3 className="text-xl font-semibold text-foreground mb-3">
-          Personalidade
-        </h3>
-        <p className="text-muted-foreground mb-4">
-          <strong>Somos</strong>: Precisos, acessíveis, éticos, inovadores
-          <br />
-          <strong>Não somos</strong>: Arrogantes, genéricos, promocionais
-          agressivos
-        </p>
-
-        <h3 className="text-xl font-semibold text-foreground mb-3">
-          Princípios de Comunicação
-        </h3>
-        <ol className="list-decimal pl-6 text-muted-foreground mb-6">
-          <li>
-            <strong>Clareza First</strong>: Simplicidade sem simplismo
-          </li>
-          <li>
-            <strong>Dados Sempre</strong>: Toda afirmação com evidência
-          </li>
-          <li>
-            <strong>Benefício Claro</strong>: Foco no valor para o cliente
-          </li>
-          <li>
-            <strong>Tom Humano</strong>: Tecnologia com propósito
-          </li>
-        </ol>
-
-        <h3 className="text-xl font-semibold text-foreground mb-3">
-          Exemplos Práticos
-        </h3>
-        <div className="bg-green-50 border border-green-200 p-4 rounded-lg mb-4">
-          <p className="text-green-800 mb-0">
-            <strong>✓ Correto</strong>:<br />
-            "Valorização média: +23% (147 variáveis analisadas)"
-          </p>
-        </div>
-        <div className="bg-red-50 border border-red-200 p-4 rounded-lg mb-8">
-          <p className="text-red-800 mb-0">
-            <strong>✗ Incorreto</strong>:<br />
-            "Nossa plataforma revolucionária usa IA de ponta!"
-          </p>
-        </div>
+        <ToneOfVoiceSection />
 
         <hr className="my-8" />
-
-        <h2 className="text-2xl font-bold text-foreground mb-4">
-          9. Acessibilidade e Inclusão
-        </h2>
-
-        <h3 className="text-xl font-semibold text-foreground mb-3">
-          Compromisso WCAG AA+
-        </h3>
-        <ul className="list-disc pl-6 text-muted-foreground mb-6">
-          <li>Contraste mínimo 4.5:1 (7:1 para AAA)</li>
-          <li>Navegação completa por teclado</li>
-          <li>Alt text descritivo obrigatório</li>
-          <li>
-            Respeito a{' '}
-            <code className="bg-muted px-2 py-1 rounded">
-              prefers-reduced-motion
-            </code>
-          </li>
-        </ul>
-
-        <h3 className="text-xl font-semibold text-foreground mb-3">
-          Ferramentas de Validação
-        </h3>
-        <ul className="list-disc pl-6 text-muted-foreground mb-8">
-          <li>
-            <strong>Lighthouse</strong>: Score ≥ 90
-          </li>
-          <li>
-            <strong>axe DevTools</strong>: 0 erros
-          </li>
-          <li>
-            <strong>WAVE</strong>: Full compliance
-          </li>
-          <li>
-            <strong>WebAIM</strong>: Contrast checker
-          </li>
-        </ul>
+        <AccessibilityAndInclusionSection />
 
         <hr className="my-8" />
 
