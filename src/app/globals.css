@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* IBVI Brand Colors as CSS variables */
+    --ibvi-teal: 191 38% 25%;
+    --ibvi-gold: 39 87% 65%;
+    --ibvi-charcoal: 0 0% 11%;
+    --ibvi-cream: 43 90% 96%;
+    --ibvi-navy: 203 22% 7%;
+    
+    /* shadcn/ui variables - Light mode */
+    --background: 43 90% 96%; /* cream */
+    --foreground: 0 0% 11%; /* charcoal */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 11%;
+    
+    --primary: 191 38% 25%; /* teal */
+    --primary-foreground: 43 90% 96%;
+    
+    --secondary: 39 87% 65%; /* gold */
+    --secondary-foreground: 0 0% 11%;
+    
+    --muted: 43 20% 95%;
+    --muted-foreground: 0 0% 40%;
+    
+    --accent: 39 87% 65%; /* gold */
+    --accent-foreground: 0 0% 11%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 191 38% 25%; /* teal */
+    
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    /* Dark mode with IBVI navy */
+    --background: 203 22% 7%; /* navy */
+    --foreground: 43 90% 96%; /* cream */
+    
+    --card: 203 22% 10%;
+    --card-foreground: 43 90% 96%;
+    
+    --popover: 203 22% 10%;
+    --popover-foreground: 43 90% 96%;
+    
+    --primary: 39 87% 65%; /* gold in dark mode */
+    --primary-foreground: 0 0% 11%;
+    
+    --secondary: 191 38% 25%; /* teal in dark mode */
+    --secondary-foreground: 43 90% 96%;
+    
+    --muted: 203 22% 15%;
+    --muted-foreground: 43 40% 80%;
+    
+    --accent: 39 87% 65%;
+    --accent-foreground: 0 0% 11%;
+    
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 203 22% 20%;
+    --input: 203 22% 20%;
+    --ring: 39 87% 65%; /* gold in dark mode */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* IBVI Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* IBVI Brand Gradients */
+  .gradient-ibvi {
+    @apply bg-gradient-to-br from-ibvi-teal to-ibvi-teal-700;
+  }
+  
+  .gradient-gold {
+    @apply bg-gradient-to-br from-ibvi-gold to-ibvi-gold-600;
+  }
+  
+  /* IBVI Brand Shadows */
+  .shadow-ibvi {
+    box-shadow: 0 4px 6px -1px rgba(40, 81, 90, 0.1), 
+                0 2px 4px -1px rgba(40, 81, 90, 0.06);
+  }
+}
