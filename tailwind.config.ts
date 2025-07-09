@@ -1,35 +1,20 @@
+// tailwind.config.ts – 100% v4-ready
 import type { Config } from 'tailwindcss';
-import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssAnimate from 'tailwindcss-animate'; // ✅ ESM
 
 const config: Config = {
   darkMode: 'class',
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  prefix: '',
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'], // v4 dispensa paths explícitos, mas ok se quiser
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
+    container: { center: true, padding: '2rem', screens: { '2xl': '1400px' } },
     extend: {
       colors: {
-        // Aliases for legacy IBVI color classes
-        'ibvi-teal': 'hsl(var(--color-teal) / <alpha>)',
-        'ibvi-gold': 'hsl(var(--color-gold) / <alpha>)',
-        'ibvi-charcoal': 'hsl(var(--color-charcoal) / <alpha>)',
-        'ibvi-cream': 'hsl(var(--color-cream) / <alpha>)',
-        'ibvi-navy': 'hsl(var(--color-navy) / <alpha>)',
-        // Semantic colors
-        success: '#27AE60',
-        warning: '#F39C12',
-        error: '#E74C3C',
-        info: '#3498DB',
+        // IBVI brand colors - Tailwind v4 native opacity support
+        'ibvi-teal': 'hsl(var(--color-teal))',
+        'ibvi-gold': 'hsl(var(--color-gold))',
+        'ibvi-charcoal': 'hsl(var(--color-charcoal))',
+        'ibvi-cream': 'hsl(var(--color-cream))',
+        'ibvi-navy': 'hsl(var(--color-navy))',
 
         // shadcn/ui compatibility
         border: 'hsl(var(--border))',
@@ -65,34 +50,16 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+
+        // Status colors
+        success: '#27AE60',
+        warning: '#F39C12',
+        error: '#E74C3C',
+        info: '#3498DB',
       },
-      spacing: {
-        // IBVI spacing scale
-        xxs: '4px',
-        xs: '8px',
-        sm: '16px',
-        md: '24px',
-        lg: '32px',
-        xl: '48px',
-        xxl: '64px',
-        xxxl: '96px',
-      },
-      fontFamily: {
-        sans: [
-          'Inter',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'sans-serif',
-        ],
-      },
+
+      // Font sizes
       fontSize: {
-        // IBVI type scale
-        display: [
-          '72px',
-          { lineHeight: '1', letterSpacing: '-0.03em', fontWeight: '700' },
-        ],
         h1: [
           '48px',
           { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' },
@@ -111,11 +78,15 @@ const config: Config = {
         caption: ['14px', { lineHeight: '1.4', letterSpacing: '0.01em' }],
         small: ['12px', { lineHeight: '1.3', letterSpacing: '0.02em' }],
       },
+
+      // Border radius
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+
+      // Animations
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
@@ -134,4 +105,5 @@ const config: Config = {
   },
   plugins: [tailwindcssAnimate],
 };
+
 export default config;
