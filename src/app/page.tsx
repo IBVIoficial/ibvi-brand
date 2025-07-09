@@ -1,6 +1,12 @@
-import { Logo } from '@/components/brand/Logo'
-import { Button } from '@/components/brand/Button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Logo } from '@/components/brand/Logo';
+import { Button } from '@/components/brand/Button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 
 export default function Home() {
   return (
@@ -13,7 +19,7 @@ export default function Home() {
             Sistema de Design IBVI
           </h1>
           <p className="text-body-lg text-muted-foreground max-w-2xl mx-auto">
-            Implementação com Next.js 14, Tailwind CSS e shadcn/ui
+            Implementação com Next.js 15, Tailwind CSS e shadcn/ui
           </p>
         </div>
 
@@ -41,9 +47,7 @@ export default function Home() {
         <Card>
           <CardHeader>
             <CardTitle>Paleta de Cores</CardTitle>
-            <CardDescription>
-              Cores oficiais da marca IBVI
-            </CardDescription>
+            <CardDescription>Cores oficiais da marca IBVI</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -77,5 +81,5 @@ export default function Home() {
         </Card>
       </div>
     </main>
-  )
+  );
 }
