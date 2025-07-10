@@ -64,16 +64,7 @@ const cardData: CardData[] = [
     descriptionClassName: "text-gray-500 dark:text-gray-400",
     buttonClassName: "bg-ibvi-gold hover:bg-ibvi-gold/90 text-ibvi-nocturne-teal dark:text-ibvi-nocturne-teal",
   },
-  {
-    title: "Footer",
-    description: "Diretrizes de implementação do Footer",
-    buttonText: "Ver exemplos",
-    href: "/examples/footer",
-    cardClassName: "bg-white/90 dark:bg-card/90",
-    titleClassName: "text-ibvi-nocturne-teal dark:text-white",
-    descriptionClassName: "text-gray-500 dark:text-gray-400",
-    buttonClassName: "bg-ibvi-gold hover:bg-ibvi-gold/90 text-ibvi-nocturne-teal dark:text-ibvi-nocturne-teal",
-  },
+
   {
     title: "Sobre o IBVI",
     description: "Conheça nossa missão e proposta",

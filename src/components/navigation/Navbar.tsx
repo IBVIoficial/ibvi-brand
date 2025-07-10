@@ -27,7 +27,7 @@ const navigation: NavItem[] = [
   { name: 'Início', href: '/' },
   { name: 'Sobre', href: '/sobre' },
   { name: 'Manual', href: '/manual' },
-  { name: 'Componentes', href: '/components' },
+  { name: 'Exemplos & Componentes', href: '/examples-components' },
 ];
 
 export default function Navbar() {
@@ -115,8 +115,10 @@ export default function Navbar() {
               </MenuItems>
             </Menu>
 
-            <Button size="sm" className="hidden lg:flex">
-              Acessar Plataforma
+            <Button size="sm" className="hidden lg:flex" asChild>
+              <Link href="https://dashboard.ibvi.ai/" target="_blank" rel="noopener noreferrer">
+                Acessar Plataforma
+              </Link>
             </Button>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">

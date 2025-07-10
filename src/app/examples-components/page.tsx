@@ -1,5 +1,6 @@
 'use client'
 
+import * as React from 'react'
 import { useState } from 'react'
 import { Logo } from '@/components/brand/Logo'
 import { Button } from '@/components/brand/Button'
@@ -22,8 +23,6 @@ import {
 } from '@/components/ui/select'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Footer } from '@/components/layout/Footer'
-import { FooterDark } from '@/components/layout/FooterDark'
 import { SimpleCard, SimpleCardHeader, SimpleCardContent, SimpleCardFooter } from '@/components/ui/simple-card'
 import { IbviLogo } from '@/components/ibvi-logo'
 
@@ -47,7 +46,6 @@ export default function ExamplesComponentsPage() {
           <TabsList className="mb-8 w-full justify-start">
             <TabsTrigger value="components">Componentes</TabsTrigger>
             <TabsTrigger value="cards">Cards</TabsTrigger>
-            <TabsTrigger value="footer">Footer</TabsTrigger>
           </TabsList>
 
           {/* COMPONENTS TAB */}
@@ -107,15 +105,15 @@ export default function ExamplesComponentsPage() {
                     <CardTitle>Badges e Status</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      <Badge>Padrão</Badge>
-                      <Badge variant="secondary">Secundário</Badge>
-                      <Badge variant="destructive">Erro</Badge>
-                      <Badge variant="outline">Outline</Badge>
-                      <Badge className="bg-success text-white">Sucesso</Badge>
-                      <Badge className="bg-warning text-white">Aviso</Badge>
-                      <Badge className="bg-info text-white">Info</Badge>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      <Badge>Default</Badge>
+                      <Badge variant="secondary">Secondary</Badge>
+                      <Badge variant="destructive">Destructive</Badge>
+                      <Badge className="bg-ibvi-teal text-white border-transparent">Teal</Badge>
+                      <Badge className="bg-ibvi-gold text-ibvi-nocturne-teal border-transparent">Gold</Badge>
+                      <Badge className="bg-ibvi-cream text-ibvi-nocturne-teal border-transparent">Cream</Badge>
                     </div>
+                    <Badge className="bg-info text-white border-transparent">Info</Badge>
                   </CardContent>
                 </Card>
 
@@ -288,32 +286,7 @@ export default function ExamplesComponentsPage() {
             </div>
           </TabsContent>
 
-          {/* FOOTER TAB */}
-          <TabsContent value="footer" className="space-y-8">
-            <SimpleCard className="mb-12">
-              <SimpleCardHeader 
-                title="Footer Light" 
-                description="Versão clara do footer, ideal para páginas com fundo claro."
-              />
-              <SimpleCardContent className="p-0 overflow-hidden rounded-b-lg">
-                <div className="border rounded-lg overflow-hidden">
-                  <Footer />
-                </div>
-              </SimpleCardContent>
-            </SimpleCard>
 
-            <SimpleCard>
-              <SimpleCardHeader 
-                title="Footer Dark" 
-                description="Versão escura do footer, ideal para páginas com fundo escuro ou para criar contraste."
-              />
-              <SimpleCardContent className="p-0 overflow-hidden rounded-b-lg">
-                <div className="border rounded-lg overflow-hidden">
-                  <FooterDark />
-                </div>
-              </SimpleCardContent>
-            </SimpleCard>
-          </TabsContent>
         </Tabs>
       </div>
     </main>
