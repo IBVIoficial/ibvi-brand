@@ -61,31 +61,6 @@ export default function SobrePage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 max-w-7xl items-center justify-between">
-          <Link href="/" aria-label="IBVI Home">
-            <IbviLogo />
-          </Link>
-          <div className="flex items-center gap-2">
-            <nav className="hidden md:flex gap-6 text-sm font-medium">
-              <Link href="/" className="transition-colors hover:text-foreground/80 text-foreground/60">
-                Início
-              </Link>
-              <Link href="#missao" className="transition-colors hover:text-foreground/80 text-foreground/60">
-                Missão
-              </Link>
-              <Link href="#metodologia" className="transition-colors hover:text-foreground/80 text-foreground/60">
-                Metodologia
-              </Link>
-              <Link href="#roadmap" className="transition-colors hover:text-foreground/80 text-foreground/60">
-                Roadmap
-              </Link>
-            </nav>
-            <ThemeToggle />
-          </div>
-        </div>
-      </header>
-
       <main className="flex-1">
         {/* Hero Section */}
         <section className="container max-w-7xl py-20 md:py-32 text-center">
@@ -335,24 +310,6 @@ export default function SobrePage() {
         </section>
       </main>
 
-      <footer className="border-t">
-        <div className="container max-w-7xl py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <IbviLogo />
-            <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} IBVI. Todos os direitos reservados.
-            </p>
-          </div>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <Link href="#" className="hover:text-foreground">
-              Termos de Serviço
-            </Link>
-            <Link href="#" className="hover:text-foreground">
-              Política de Privacidade
-            </Link>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

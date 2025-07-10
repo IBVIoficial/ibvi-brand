@@ -13,9 +13,6 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-8 md:p-12 lg:p-24">
       <div className="container max-w-4xl">
-        <div className="flex justify-end mb-4">
-          <ThemeToggle />
-        </div>
         <div className="mb-12 text-center">
           <Logo variant="primary" size="xl" animated className="mx-auto mb-6" />
           <h1 className="text-4xl font-bold text-ibvi-charcoal dark:text-white mb-4">
