@@ -10,7 +10,7 @@ interface ExtendedConfig extends Config {
 const config: ExtendedConfig = {
   darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-  safelist: [{ pattern: /(bg|text|border)-ibvi-(teal|gold|charcoal|cream|navy)(\/\d{1,3})?/ }],
+  safelist: [{ pattern: /(bg|text|border)-ibvi-(teal|gold|cream|nocturne-teal)(\/\d{1,3})?/ }],
   theme: {
     container: { center: true, padding: '2rem', screens: { '2xl': '1400px' } },
     fontFamily: {
@@ -19,14 +19,10 @@ const config: ExtendedConfig = {
     extend: {
       colors: {
         // IBVI brand colors
-        'ibvi-teal': '#28515A',
-        'ibvi-gold': '#F3BA57',
-        'ibvi-charcoal': '#1C1C1C',
-        'ibvi-cream': '#FEF9EC',
-        'nocturne-teal': '#050E18',
-        // Cor de teste
-        'test-color-direct': '#ff0000',
-        'test-color': '#ff0000',
+        'ibvi-teal': 'hsl(191deg 38% 25%)',
+        'ibvi-gold': 'hsl(39deg 87% 65%)',
+        'ibvi-cream': 'hsl(43deg 90% 96%)',
+        'ibvi-nocturne-teal': 'hsl(212deg 58% 6%)',
 
         // shadcn/ui compatibility
         border: 'hsl(var(--border))',

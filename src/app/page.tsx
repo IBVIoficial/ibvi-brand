@@ -85,6 +85,19 @@ export default function Home() {
               </Button>
             </SimpleCardContent>
           </SimpleCard>
+          
+          <SimpleCard className="hover:shadow-lg transition-shadow bg-gradient-to-br from-ibvi-teal to-ibvi-teal/90 text-white">
+            <SimpleCardHeader
+              title="Sobre o IBVI"
+              description="Conheça nossa missão e proposta"
+              className="text-white"
+            />
+            <SimpleCardContent className="flex justify-end">
+              <Button asChild variant="secondary" className="bg-white text-ibvi-teal hover:bg-gray-100">
+                <Link href="/sobre">Saiba mais</Link>
+              </Button>
+            </SimpleCardContent>
+          </SimpleCard>
         </div>
 
         <SimpleCard>

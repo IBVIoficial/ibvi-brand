@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Import Inter font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -10,72 +8,70 @@
     /* IBVI Brand Palette */
     --color-teal: 191deg 38% 25%;
     --color-gold: 39deg 87% 65%;
-    --color-charcoal: 0deg 0% 11%;
     --color-cream: 43deg 90% 96%;
-    --color-navy: 203deg 22% 7%;
-    --color-bg-dark: #050E18;
-
+    --color-nocturne-teal: 212deg 58% 6%;
+    
     /* shadcn/ui variables - Light mode */
-    --background: hsl(var(--color-cream));
-    --foreground: hsl(var(--color-navy));
-
-    --card: hsl(var(--color-cream));
-    --card-foreground: hsl(var(--color-charcoal));
-
-    --popover: hsl(var(--color-cream));
-    --popover-foreground: hsl(var(--color-charcoal));
-
-    --primary: hsl(var(--color-teal));
-    --primary-foreground: hsl(var(--color-cream));
-
-    --secondary: hsl(var(--color-gold));
-    --secondary-foreground: hsl(var(--color-charcoal));
-
-    --muted: hsl(43deg 20% 95%);
-    --muted-foreground: hsl(0deg 0% 40%);
-
-    --accent: hsl(var(--color-gold));
-    --accent-foreground: hsl(var(--color-charcoal));
-
-    --destructive: hsl(0deg 84% 60%);
-    --destructive-foreground: hsl(0deg 0% 98%);
-
-    --border: hsl(0deg 0% 90%);
-    --input: hsl(0deg 0% 90%);
-    --ring: hsl(var(--color-teal));
-
     --radius: 0.5rem;
+
+    --background: 43deg 90% 96%;
+    --foreground: 212deg 58% 6%;
+
+    --card: 43deg 90% 96%;
+    --card-foreground: 0deg 0% 11%;
+
+    --popover: 43deg 90% 96%;
+    --popover-foreground: 0deg 0% 11%;
+
+    --primary: 191deg 38% 25%;
+    --primary-foreground: 43deg 90% 96%;
+
+    --secondary: 39deg 87% 65%;
+    --secondary-foreground: 0deg 0% 11%;
+
+    --muted: 43deg 20% 95%;
+    --muted-foreground: 0deg 0% 40%;
+
+    --accent: 39deg 87% 65%;
+    --accent-foreground: 0deg 0% 11%;
+
+    --destructive: 0deg 84% 60%;
+    --destructive-foreground: 0deg 0% 98%;
+
+    --border: 0deg 0% 90%;
+    --input: 0deg 0% 90%;
+    --ring: 191deg 38% 25%;
   }
 
   .dark {
-    /* Dark mode with IBVI navy */
-    --background: hsl(var(--color-navy));
-    --foreground: hsl(var(--color-cream));
+    /* Dark mode with Nocturne Teal */
+    --background: 212deg 58% 6%;
+    --foreground: 43deg 90% 96%;
 
-    --card: hsl(203 22% 10%);
-    --card-foreground: hsl(var(--color-cream));
+    --card: 191deg 38% 15%;
+    --card-foreground: 43deg 90% 96%;
 
-    --popover: hsl(203 22% 10%);
-    --popover-foreground: hsl(var(--color-cream));
+    --popover: 212deg 58% 10%;
+    --popover-foreground: 43deg 90% 96%;
 
-    --primary: hsl(var(--color-gold)); /* gold in dark mode */
-    --primary-foreground: hsl(var(--color-charcoal));
+    --primary: 39deg 87% 65%; /* gold in dark mode */
+    --primary-foreground: 0deg 0% 11%;
 
-    --secondary: hsl(var(--color-teal)); /* teal in dark mode */
-    --secondary-foreground: hsl(var(--color-cream));
+    --secondary: 191deg 38% 25%; /* teal in dark mode */
+    --secondary-foreground: 43deg 90% 96%;
 
-    --muted: 203deg 22% 15%;
+    --muted: 212deg 58% 15%;
     --muted-foreground: 43deg 40% 80%;
 
-    --accent: hsl(var(--color-gold));
-    --accent-foreground: hsl(var(--color-charcoal));
+    --accent: 39deg 87% 65%;
+    --accent-foreground: 0deg 0% 11%;
 
     --destructive: 0deg 70% 50%;
     --destructive-foreground: 0deg 0% 98%;
 
-    --border: 203deg 22% 20%;
-    --input: 203deg 22% 20%;
-    --ring: hsl(var(--color-gold)); /* gold in dark mode */
+    --border: 212deg 58% 20%;
+    --input: 212deg 58% 20%;
+    --ring: 39deg 87% 65%; /* gold in dark mode */
   }
 }
 
@@ -84,9 +80,9 @@
     border-color: hsl(var(--border));
   }
   body {
-    background-color: #FEF9EC !important;
+    background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
     font-feature-settings:
       'rlig' 1,
       'calt' 1;
@@ -125,6 +121,6 @@
   
   /* Logo Container with Nocturne Teal background */
   .logo-container {
-    background-color: var(--color-bg-dark);
+    background-color: hsl(var(--color-nocturne-teal));
   }
 }

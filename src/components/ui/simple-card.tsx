@@ -27,9 +27,9 @@ interface SimpleCardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 export function SimpleCardHeader({ title, description, className, ...props }: SimpleCardHeaderProps) {
   return (
     <div className={cn("mb-4", className)} {...props}>
-      <h3 className="text-lg font-medium leading-6 text-ibvi-charcoal">{title}</h3>
+      <h3 className="text-lg font-medium leading-6 text-ibvi-charcoal [.text-white_&]:text-white">{title}</h3>
       {description && (
-        <p className="mt-1 text-sm text-muted-foreground">{description}</p>
+        <p className="mt-1 text-sm text-muted-foreground [.text-white_&]:text-white/80">{description}</p>
       )}
     </div>
   );
