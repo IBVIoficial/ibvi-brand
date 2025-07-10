@@ -1,18 +1,26 @@
-'use client'
+'use client';
 
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { IbviLogo } from '@/components/ibvi-logo'
-import { ThemeToggle } from '@/components/theme-toggle'
-import { Button } from '@/components/brand/Button'
-import { cn } from '@/lib/utils'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { IbviLogo } from '@/components/ibvi-logo';
+import { ThemeToggle } from '@/components/theme-toggle';
+import { Button } from '@/components/brand/Button';
+import { cn } from '@/lib/utils';
 
 interface NavItem {
-  name: string
-  href: string
-  current?: boolean
+  name: string;
+  href: string;
+  current?: boolean;
 }
 
 const navigation: NavItem[] = [
@@ -20,20 +28,23 @@ const navigation: NavItem[] = [
   { name: 'Sobre', href: '/sobre' },
   { name: 'Manual', href: '/manual' },
   { name: 'Componentes', href: '/components' },
-]
+];
 
 export default function Navbar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const isCurrentPage = (href: string) => {
     if (href === '/') {
-      return pathname === '/'
+      return pathname === '/';
     }
-    return pathname.startsWith(href)
-  }
+    return pathname.startsWith(href);
+  };
 
   return (
-    <Disclosure as="nav" className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40 sticky top-0 z-50">
+    <Disclosure
+      as="nav"
+      className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40 sticky top-0 z-50"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           <div className="flex">
@@ -44,27 +55,27 @@ export default function Navbar() {
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navigation.map((item) => {
-                const current = isCurrentPage(item.href)
+                const current = isCurrentPage(item.href);
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
                     className={cn(
-                      "inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium transition-colors",
+                      'inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium transition-colors',
                       current
-                        ? "border-primary text-foreground"
-                        : "border-transparent text-muted-foreground hover:border-border hover:text-foreground"
+                        ? 'border-primary text-foreground'
+                        : 'border-transparent text-muted-foreground hover:border-border hover:text-foreground'
                     )}
                   >
                     {item.name}
                   </Link>
-                )
+                );
               })}
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center space-x-4">
             <ThemeToggle />
-            
+
             {/* Profile dropdown */}
             <Menu as="div" className="relative ml-3">
               <div>
@@ -97,9 +108,7 @@ export default function Navbar() {
                   </Link>
                 </MenuItem>
                 <MenuItem>
-                  <button
-                    className="block w-full text-left px-4 py-2 text-sm text-foreground data-[focus]:bg-muted data-[focus]:outline-none"
-                  >
+                  <button className="block w-full text-left px-4 py-2 text-sm text-foreground data-[focus]:bg-muted data-[focus]:outline-none">
                     Sair
                   </button>
                 </MenuItem>
@@ -116,8 +125,14 @@ export default function Navbar() {
             <DisclosureButton className="group relative ml-2 inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-muted hover:text-foreground focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary">
               <span className="absolute -inset-0.5" />
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
-              <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
+              <Bars3Icon
+                aria-hidden="true"
+                className="block h-6 w-6 group-data-[open]:hidden"
+              />
+              <XMarkIcon
+                aria-hidden="true"
+                className="hidden h-6 w-6 group-data-[open]:block"
+              />
             </DisclosureButton>
           </div>
         </div>
@@ -126,22 +141,22 @@ export default function Navbar() {
       <DisclosurePanel className="sm:hidden border-t border-border">
         <div className="space-y-1 pb-3 pt-2">
           {navigation.map((item) => {
-            const current = isCurrentPage(item.href)
+            const current = isCurrentPage(item.href);
             return (
               <DisclosureButton
                 key={item.name}
                 as={Link}
                 href={item.href}
                 className={cn(
-                  "block border-l-4 py-2 pl-3 pr-4 text-base font-medium transition-colors",
+                  'block border-l-4 py-2 pl-3 pr-4 text-base font-medium transition-colors',
                   current
-                    ? "border-primary bg-primary/5 text-primary"
-                    : "border-transparent text-muted-foreground hover:border-border hover:bg-muted hover:text-foreground"
+                    ? 'border-primary bg-primary/5 text-primary'
+                    : 'border-transparent text-muted-foreground hover:border-border hover:bg-muted hover:text-foreground'
                 )}
               >
                 {item.name}
               </DisclosureButton>
-            )
+            );
           })}
         </div>
         <div className="border-t border-border pb-3 pt-4">
@@ -152,8 +167,12 @@ export default function Navbar() {
               </div>
             </div>
             <div className="ml-3">
-              <div className="text-base font-medium text-foreground">Usuário IBVI</div>
-              <div className="text-sm font-medium text-muted-foreground">usuario@ibvi.com.br</div>
+              <div className="text-base font-medium text-foreground">
+                Usuário IBVI
+              </div>
+              <div className="text-sm font-medium text-muted-foreground">
+                usuario@ibvi.com.br
+              </div>
             </div>
           </div>
           <div className="mt-3 space-y-1">
@@ -186,5 +205,5 @@ export default function Navbar() {
         </div>
       </DisclosurePanel>
     </Disclosure>
-  )
+  );
 }
