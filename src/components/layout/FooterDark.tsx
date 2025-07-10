@@ -88,7 +88,7 @@ const navigation = {
 
 export function FooterDark() {
   return (
-    <footer className="bg-ibvi-navy text-white">
+    <footer className="bg-nocturne-teal text-white">
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-4">
@@ -176,7 +176,7 @@ export function FooterDark() {
             <div className="mt-4 sm:ml-4 sm:mt-0 sm:shrink-0">
               <button
                 type="submit"
-                className="flex w-full items-center justify-center rounded-md bg-ibvi-gold px-3 py-2 text-sm font-semibold text-ibvi-navy shadow-sm hover:bg-ibvi-gold/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ibvi-gold"
+                className="flex w-full items-center justify-center rounded-md bg-ibvi-gold px-3 py-2 text-sm font-semibold text-nocturne-teal shadow-sm hover:bg-ibvi-gold/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ibvi-gold"
               >
                 Assinar
               </button>

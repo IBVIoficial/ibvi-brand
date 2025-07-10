@@ -70,7 +70,7 @@ export default function Home() {
             description="Cores oficiais da marca IBVI"
           />
           <SimpleCardContent>
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center">
                 <div className="w-full h-20 rounded-lg bg-ibvi-teal mb-2"></div>
                 <p className="text-sm font-medium">Teal</p>
@@ -82,19 +82,9 @@ export default function Home() {
                 <p className="text-xs text-muted-foreground">#F3BA57</p>
               </div>
               <div className="text-center">
-                <div className="w-full h-20 rounded-lg bg-ibvi-charcoal mb-2"></div>
-                <p className="text-sm font-medium">Charcoal</p>
-                <p className="text-xs text-muted-foreground">#1C1C1C</p>
-              </div>
-              <div className="text-center">
                 <div className="w-full h-20 rounded-lg bg-ibvi-cream border mb-2"></div>
                 <p className="text-sm font-medium">Cream</p>
                 <p className="text-xs text-muted-foreground">#FEF9EC</p>
-              </div>
-              <div className="text-center">
-                <div className="w-full h-20 rounded-lg bg-ibvi-navy mb-2"></div>
-                <p className="text-sm font-medium">Navy</p>
-                <p className="text-xs text-muted-foreground">#0E1316</p>
               </div>
               <div className="text-center">
                 <div className="w-full h-20 rounded-lg bg-nocturne-teal mb-2"></div>

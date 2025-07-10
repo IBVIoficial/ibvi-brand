@@ -23,7 +23,6 @@ const config: ExtendedConfig = {
         'ibvi-gold': '#F3BA57',
         'ibvi-charcoal': '#1C1C1C',
         'ibvi-cream': '#FEF9EC',
-        'ibvi-navy': '#0E1316',
         'nocturne-teal': '#050E18',
         // Cor de teste
         'test-color-direct': '#ff0000',

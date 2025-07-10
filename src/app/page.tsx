@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/brand/Logo';
 import { Button } from '@/components/brand/Button';
+import { ThemeToggle } from '@/components/theme-toggle';
 import {
   SimpleCard,
   SimpleCardHeader,
@@ -12,12 +13,15 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center p-8 md:p-12 lg:p-24">
       <div className="container max-w-4xl">
+        <div className="flex justify-end mb-4">
+          <ThemeToggle />
+        </div>
         <div className="mb-12 text-center">
           <Logo variant="primary" size="xl" animated className="mx-auto mb-6" />
-          <h1 className="text-4xl font-bold text-ibvi-charcoal mb-4">
+          <h1 className="text-4xl font-bold text-ibvi-charcoal dark:text-white mb-4">
             Guia de Marca IBVI
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground dark:text-gray-300 max-w-2xl mx-auto">
             Sistema de identidade visual e recursos de marca
           </p>
         </div>
@@ -35,7 +39,7 @@ export default function Home() {
             </SimpleCardContent>
           </SimpleCard>
 
-          <SimpleCard className="hover:shadow-lg transition-shadow bg-ibvi-navy text-white">
+          <SimpleCard className="hover:shadow-lg transition-shadow bg-nocturne-teal text-white">
             <SimpleCardHeader
               title="Site Dark"
               description="Versão escura do site de referências"

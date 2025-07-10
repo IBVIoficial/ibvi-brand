@@ -1,6 +1,10 @@
 import { Logo } from '@/components/brand/Logo';
 import { Button } from '@/components/brand/Button';
-import { SimpleCard, SimpleCardHeader, SimpleCardContent } from '@/components/ui/simple-card';
+import {
+  SimpleCard,
+  SimpleCardHeader,
+  SimpleCardContent,
+} from '@/components/ui/simple-card';
 
 export default function HomeDark() {
   return (
@@ -8,7 +12,7 @@ export default function HomeDark() {
       <div className="container max-w-6xl">
         {/* Logo Demo */}
         <div className="mb-12 text-center">
-          <Logo variant="mono-dark" size="xl" animated className="mx-auto mb-6" />
+          <Logo variant="dark" size="xl" animated className="mx-auto mb-6" />
           <h1 className="text-h1 font-bold text-white mb-4">
             Sistema de Design IBVI
           </h1>
@@ -18,7 +22,7 @@ export default function HomeDark() {
         </div>
 
         {/* Logo Variants */}
-        <SimpleCard className="mb-8 bg-ibvi-navy border-gray-800 text-white">
+        <SimpleCard className="mb-8 bg-gray-900 border-gray-800 text-white">
           <SimpleCardHeader
             title="Variantes de Logo"
             description="Todas as variações da logomarca IBVI"
@@ -46,7 +50,7 @@ export default function HomeDark() {
         </SimpleCard>
 
         {/* Button Examples */}
-        <SimpleCard className="mb-8 bg-ibvi-navy border-gray-800 text-white">
+        <SimpleCard className="mb-8 bg-gray-900 border-gray-800 text-white">
           <SimpleCardHeader
             title="Componentes de Botão"
             description="Variações do componente Button com animações Framer Motion"
@@ -55,22 +59,37 @@ export default function HomeDark() {
             <div className="flex flex-wrap gap-4">
               <Button>CTA Principal</Button>
               <Button variant="primary">Ação Primária</Button>
-              <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-700">Outline</Button>
+              <Button
+                variant="outline"
+                className="border-gray-600 text-gray-300 hover:bg-gray-700"
+              >
+                Outline
+              </Button>
               <Button variant="secondary">Secundário</Button>
-              <Button variant="ghost" className="text-gray-300 hover:bg-gray-700">Ghost</Button>
-              <Button variant="link" className="text-ibvi-gold hover:text-ibvi-gold/80">Link</Button>
+              <Button
+                variant="ghost"
+                className="text-gray-300 hover:bg-gray-700"
+              >
+                Ghost
+              </Button>
+              <Button
+                variant="link"
+                className="text-ibvi-gold hover:text-ibvi-gold/80"
+              >
+                Link
+              </Button>
             </div>
           </SimpleCardContent>
         </SimpleCard>
 
         {/* Color Palette */}
-        <SimpleCard className="bg-ibvi-navy border-gray-800 text-white">
+        <SimpleCard className="bg-gray-900 border-gray-800 text-white">
           <SimpleCardHeader
             title="Paleta de Cores"
             description="Cores oficiais da marca IBVI"
           />
           <SimpleCardContent>
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center">
                 <div className="w-full h-20 rounded-lg bg-ibvi-teal mb-2"></div>
                 <p className="text-sm font-medium text-white">Teal</p>
@@ -82,19 +101,9 @@ export default function HomeDark() {
                 <p className="text-xs text-gray-400">#F3BA57</p>
               </div>
               <div className="text-center">
-                <div className="w-full h-20 rounded-lg bg-ibvi-charcoal mb-2"></div>
-                <p className="text-sm font-medium text-white">Charcoal</p>
-                <p className="text-xs text-gray-400">#1C1C1C</p>
-              </div>
-              <div className="text-center">
                 <div className="w-full h-20 rounded-lg bg-ibvi-cream border border-gray-700 mb-2"></div>
                 <p className="text-sm font-medium text-white">Cream</p>
                 <p className="text-xs text-gray-400">#FEF9EC</p>
-              </div>
-              <div className="text-center">
-                <div className="w-full h-20 rounded-lg bg-ibvi-navy border border-gray-700 mb-2"></div>
-                <p className="text-sm font-medium text-white">Navy</p>
-                <p className="text-xs text-gray-400">#0E1316</p>
               </div>
               <div className="text-center">
                 <div className="w-full h-20 rounded-lg bg-nocturne-teal mb-2"></div>

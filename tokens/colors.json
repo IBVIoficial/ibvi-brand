@@ -23,15 +23,10 @@
         "type": "color",
         "description": "Light background"
       },
-      "navy": {
-        "value": "#0E1316",
-        "type": "color",
-        "description": "Dark background"
-      },
       "nocturne-teal": {
         "value": "#050E18",
         "type": "color",
-        "description": "Deeper dark background for logo containers"
+        "description": "Deep dark background for dark mode and logo containers"
       }
     },
     "semantic": {
