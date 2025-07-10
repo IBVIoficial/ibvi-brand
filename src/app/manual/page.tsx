@@ -2,37 +2,34 @@ import { Metadata } from 'next';
 import { Logo } from '@/components/brand/Logo';
 import { SimpleCard, SimpleCardHeader, SimpleCardContent } from '@/components/ui/simple-card';
 import { IntroductionSection } from '@/components/manual/IntroductionSection';
-import { IdentityAndPositioningSection } from '@/components/manual/IdentityAndPositioningSection';
-import { CoreVisualSystemSection } from '@/components/manual/CoreVisualSystemSection';
-import { ColorsAndTypographySection } from '@/components/manual/ColorsAndTypographySection';
-import { RoadmapSection } from '@/components/manual/RoadmapSection';
-import { ResourcesAndSupportSection } from '@/components/manual/ResourcesAndSupportSection';
-import { TypographySystemSection } from '@/components/manual/TypographySystemSection';
-import { GridAndCompositionSection } from '@/components/manual/GridAndCompositionSection';
-import { MultichannelApplicationsSection } from '@/components/manual/MultichannelApplicationsSection';
-import { ToneOfVoiceSection } from '@/components/manual/ToneOfVoiceSection';
-import { AccessibilityAndInclusionSection } from '@/components/manual/AccessibilityAndInclusionSection';
-import { DigitalImplementationSection } from '@/components/manual/DigitalImplementationSection';
-import { GovernanceAndComplianceSection } from '@/components/manual/GovernanceAndComplianceSection';
-import { UseCasesAndTemplatesSection } from '@/components/manual/UseCasesAndTemplatesSection';
-import { EvolutionAndRoadmapSection } from '@/components/manual/EvolutionAndRoadmapSection';
+import { BrandEssenceSection } from '@/components/manual/BrandEssenceSection';
+import { VisualIdentitySystemSection } from '@/components/manual/VisualIdentitySystemSection';
+import { ColorSpecificationsSection } from '@/components/manual/ColorSpecificationsSection';
+import { TypographyHierarchySection } from '@/components/manual/TypographyHierarchySection';
+import { ApplicationsContextsSection } from '@/components/manual/ApplicationsContextsSection';
+import { CommunicationGuidelinesSection } from '@/components/manual/CommunicationGuidelinesSection';
+import { GovernanceProtectionSection } from '@/components/manual/GovernanceProtectionSection';
+import { TechnicalImplementationSection } from '@/components/manual/TechnicalImplementationSection';
+import { UseCasesExamplesSection } from '@/components/manual/UseCasesExamplesSection';
+import { EvolutionMaintenanceSection } from '@/components/manual/EvolutionMaintenanceSection';
+import { TableOfContents } from '@/components/manual/TableOfContents';
 
 export const metadata: Metadata = {
   title: 'Manual de Identidade Visual - IBVI',
   description:
-    'Guia definitivo para aplicação consistente da identidade visual IBVI',
+    'Sistema de Alta Performance para Inteligência Imobiliária – [Release: Julho/2025]',
 };
 
 export default function ManualPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-4 md:p-8 lg:p-12 bg-background">
+    <main className="flex min-h-screen flex-col items-center justify-start p-4 md:p-8 lg:p-12 bg-background">
       <div className="container max-w-4xl space-y-8">
-        <header className="text-center">
+        <header className="text-center pt-8">
           <h1 className="text-4xl font-bold text-foreground mb-2">
-            Manual de Identidade Visual IBVI – Versão 2.1
+            Manual de Identidade Visual IBVI
           </h1>
-          <h2 className="text-2xl font-semibold text-muted-foreground">
-            Sistema de Alta Performance para Inteligência Imobiliária
+          <h2 className="text-xl font-semibold text-muted-foreground">
+            Sistema de Alta Performance para Inteligência Imobiliária – [Release: Julho/2025]
           </h2>
         </header>
 
@@ -63,65 +60,29 @@ export default function ManualPage() {
           </SimpleCardContent>
         </SimpleCard>
 
-        <SimpleCard>
-          <SimpleCardHeader
-            title="Sumário Executivo"
-            description="Guia definitivo para aplicação consistente da identidade visual IBVI."
-          />
-          <SimpleCardContent>
-            <p className="text-muted-foreground">
-              Garantindo coerência multicanal, mensurabilidade (CTR +18%, CPL
-              –10%, Brand Recall +25%, NPS 72, Precisão 95%) e conformidade de
-              marca.
-            </p>
-            <div className="mt-4 bg-muted p-3 rounded-lg text-sm text-muted-foreground">
-              <strong>Release:</strong> Janeiro 2025 | ISO 20671, ISO 10668,
-              LGPD/GDPR, WCAG AA
-            </div>
-          </SimpleCardContent>
-        </SimpleCard>
-
-        <MultichannelApplicationsSection />
-
+        <TableOfContents />
+        
         <IntroductionSection />
-
-        <IdentityAndPositioningSection />
-
-        <CoreVisualSystemSection />
-
-        <ColorsAndTypographySection />
-
-        <RoadmapSection />
-
-        <ResourcesAndSupportSection />
-
-        <hr className="my-8" />
-        <TypographySystemSection />
-
-        <hr className="my-8" />
-        <GridAndCompositionSection />
-
-        <hr className="my-8" />
-
-        <MultichannelApplicationsSection />
-
-        <hr className="my-8" />
-        <ToneOfVoiceSection />
-
-        <hr className="my-8" />
-        <AccessibilityAndInclusionSection />
-
-        <hr className="my-8" />
-        <DigitalImplementationSection />
-
-        <hr className="my-8" />
-        <GovernanceAndComplianceSection />
-
-        <hr className="my-8" />
-        <UseCasesAndTemplatesSection />
-
-        <hr className="my-8" />
-        <EvolutionAndRoadmapSection />
+        
+        <BrandEssenceSection />
+        
+        <VisualIdentitySystemSection />
+        
+        <ColorSpecificationsSection />
+        
+        <TypographyHierarchySection />
+        
+        <ApplicationsContextsSection />
+        
+        <CommunicationGuidelinesSection />
+        
+        <GovernanceProtectionSection />
+        
+        <TechnicalImplementationSection />
+        
+        <UseCasesExamplesSection />
+        
+        <EvolutionMaintenanceSection />
       </div>
     </main>
   );
