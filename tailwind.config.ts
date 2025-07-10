@@ -19,10 +19,10 @@ const config: ExtendedConfig = {
     extend: {
       colors: {
         // IBVI brand colors
-        'ibvi-teal': 'hsl(191deg 38% 25%)',
-        'ibvi-gold': 'hsl(39deg 87% 65%)',
-        'ibvi-cream': 'hsl(43deg 90% 96%)',
-        'ibvi-nocturne-teal': 'hsl(212deg 58% 6%)',
+        'ibvi-teal': 'hsl(var(--ibvi-teal))',
+        'ibvi-gold': 'hsl(var(--ibvi-gold))',
+        'ibvi-cream': 'hsl(var(--ibvi-cream))',
+        'ibvi-nocturne-teal': 'hsl(var(--ibvi-nocturne-teal))',
 
         // shadcn/ui compatibility
         border: 'hsl(var(--border))',

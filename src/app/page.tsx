@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Logo } from '@/components/brand/Logo';
 import { Button } from '@/components/brand/Button';
-import { ThemeToggle } from '@/components/theme-toggle';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 import {
   SimpleCard,
   SimpleCardHeader,
@@ -85,7 +85,7 @@ export default function Home() {
               </Button>
             </SimpleCardContent>
           </SimpleCard>
-          
+
           <SimpleCard className="hover:shadow-lg transition-shadow bg-gradient-to-br from-ibvi-teal to-ibvi-teal/90 text-white">
             <SimpleCardHeader
               title="Sobre o IBVI"
@@ -93,7 +93,11 @@ export default function Home() {
               className="text-white"
             />
             <SimpleCardContent className="flex justify-end">
-              <Button asChild variant="secondary" className="bg-white text-ibvi-teal hover:bg-gray-100">
+              <Button
+                asChild
+                variant="secondary"
+                className="bg-white text-ibvi-teal hover:bg-gray-100"
+              >
                 <Link href="/sobre">Saiba mais</Link>
               </Button>
             </SimpleCardContent>

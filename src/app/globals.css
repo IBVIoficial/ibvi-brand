@@ -8,72 +8,81 @@
 @layer base {
   :root {
     /* IBVI Brand Palette */
-    --color-teal: 191deg 38% 25%;
-    --color-gold: 39deg 87% 65%;
-    --color-cream: 43deg 90% 96%;
-    --color-nocturne-teal: 212deg 58% 6%;
-    
-    /* shadcn/ui variables - Light mode */
+    --ibvi-teal: 191 38% 25%;
+    --ibvi-gold: 39 87% 65%;
+    --ibvi-cream: 43 90% 96%;
+    --ibvi-nocturne-teal: 212 58% 6%;
+
+    /* Base */
+    --background: var(--ibvi-cream);
+    --foreground: 0 0% 11%;
+
+    /* Card */
+    --card: var(--ibvi-cream);
+    --card-foreground: 0 0% 11%;
+
+    /* Popover */
+    --popover: var(--ibvi-cream);
+    --popover-foreground: 0 0% 11%;
+
+    /* Primary */
+    --primary: var(--ibvi-teal);
+    --primary-foreground: var(--ibvi-cream);
+
+    /* Secondary */
+    --secondary: var(--ibvi-gold);
+    --secondary-foreground: 0 0% 11%;
+
+    /* Muted */
+    --muted: 43 20% 95%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Accent */
+    --accent: var(--ibvi-gold);
+    --accent-foreground: 0 0% 11%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Border */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: var(--ibvi-teal);
+
+    /* Radius */
     --radius: 0.5rem;
-
-    --background: 43deg 90% 96%;
-    --foreground: 212deg 58% 6%;
-
-    --card: 43deg 90% 96%;
-    --card-foreground: 0deg 0% 11%;
-
-    --popover: 43deg 90% 96%;
-    --popover-foreground: 0deg 0% 11%;
-
-    --primary: 191deg 38% 25%;
-    --primary-foreground: 43deg 90% 96%;
-
-    --secondary: 39deg 87% 65%;
-    --secondary-foreground: 0deg 0% 11%;
-
-    --muted: 43deg 20% 95%;
-    --muted-foreground: 0deg 0% 40%;
-
-    --accent: 39deg 87% 65%;
-    --accent-foreground: 0deg 0% 11%;
-
-    --destructive: 0deg 84% 60%;
-    --destructive-foreground: 0deg 0% 98%;
-
-    --border: 0deg 0% 90%;
-    --input: 0deg 0% 90%;
-    --ring: 191deg 38% 25%;
   }
 
   .dark {
     /* Dark mode with Nocturne Teal */
-    --background: 212deg 58% 6%;
-    --foreground: 43deg 90% 96%;
+    --background: var(--ibvi-nocturne-teal);
+    --foreground: var(--ibvi-cream);
 
-    --card: 191deg 38% 15%;
-    --card-foreground: 43deg 90% 96%;
+    --card: 191 38% 15%;
+    --card-foreground: var(--ibvi-cream);
 
-    --popover: 212deg 58% 10%;
-    --popover-foreground: 43deg 90% 96%;
+    --popover: 212 58% 10%;
+    --popover-foreground: var(--ibvi-cream);
 
-    --primary: 39deg 87% 65%; /* gold in dark mode */
-    --primary-foreground: 0deg 0% 11%;
+    --primary: var(--ibvi-gold);
+    --primary-foreground: 0 0% 11%;
 
-    --secondary: 191deg 38% 25%; /* teal in dark mode */
-    --secondary-foreground: 43deg 90% 96%;
+    --secondary: var(--ibvi-teal);
+    --secondary-foreground: var(--ibvi-cream);
 
-    --muted: 212deg 58% 15%;
-    --muted-foreground: 43deg 40% 80%;
+    --muted: 212 58% 15%;
+    --muted-foreground: 43 40% 80%;
 
-    --accent: 39deg 87% 65%;
-    --accent-foreground: 0deg 0% 11%;
+    --accent: var(--ibvi-gold);
+    --accent-foreground: 0 0% 11%;
 
-    --destructive: 0deg 70% 50%;
-    --destructive-foreground: 0deg 0% 98%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 212deg 58% 20%;
-    --input: 212deg 58% 20%;
-    --ring: 39deg 87% 65%; /* gold in dark mode */
+    --border: 212 58% 20%;
+    --input: 212 58% 20%;
+    --ring: var(--ibvi-gold); /* gold in dark mode */
   }
 }
 
@@ -101,16 +110,16 @@
   .gradient-ibvi {
     background-image: linear-gradient(
       to bottom right,
-      hsl(var(--color-teal)),
-      hsl(var(--color-teal) / 0.9) /* Adjust as needed for a lighter shade */
+      hsl(var(--ibvi-teal)),
+      hsl(var(--ibvi-teal) / 0.9) /* Adjust as needed for a lighter shade */
     );
   }
 
   .gradient-gold {
     background-image: linear-gradient(
       to bottom right,
-      hsl(var(--color-gold)),
-      hsl(var(--color-gold) / 0.9) /* Adjust as needed for a darker shade */
+      hsl(var(--ibvi-gold)),
+      hsl(var(--ibvi-gold) / 0.9) /* Adjust as needed for a darker shade */
     );
   }
 
@@ -120,9 +129,12 @@
       0 4px 6px -1px rgba(40, 81, 90, 0.1),
       0 2px 4px -1px rgba(40, 81, 90, 0.06);
   }
-  
+
   /* Logo Container with Nocturne Teal background */
+  /* Styles the container for the Logo component.
+   * Sets the background color to the brand's Nocturne Teal color.
+   */
   .logo-container {
-    background-color: hsl(var(--color-nocturne-teal));
+    background-color: hsl(var(--ibvi-nocturne-teal));
   }
 }
